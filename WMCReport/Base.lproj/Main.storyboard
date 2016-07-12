@@ -4,6 +4,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MYRIADPRO-SEMIEXT_0.OTF">
+            <string>MyriadPro-SemiExt</string>
+            <string>MyriadPro-SemiExt</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -13,25 +19,59 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n1-3e-k8k">
-                                <rect key="frame" x="57" y="199" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5kC-EN-reP">
+                                <rect key="frame" x="30" y="280" width="540" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HF2-gK-dUf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n1-3e-k8k">
+                                <rect key="frame" x="254" y="145" width="93" height="30"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-SemiExt" family="Myriad Pro" pointSize="30"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.91764705879999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8m-af-5qV">
-                                <rect key="frame" x="121" y="326" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yet-bo-Gme">
+                                <rect key="frame" x="30" y="350" width="540" height="40"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.60392156860000001" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WKc-fD-gDd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-SemiExt" family="Myriad Pro" pointSize="17"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MUp-Mi-gSe">
+                                <rect key="frame" x="30" y="225" width="540" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.1019607843" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5kC-EN-reP" firstAttribute="width" secondItem="MUp-Mi-gSe" secondAttribute="width" id="2sR-wO-TOV"/>
+                            <constraint firstAttribute="trailing" secondItem="5kC-EN-reP" secondAttribute="trailing" constant="30" id="4Ro-p2-Evr"/>
+                            <constraint firstItem="5kC-EN-reP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Xl-pF-3gG"/>
+                            <constraint firstItem="5kC-EN-reP" firstAttribute="leading" secondItem="MUp-Mi-gSe" secondAttribute="leading" id="HSk-qB-g08"/>
+                            <constraint firstItem="yet-bo-Gme" firstAttribute="leading" secondItem="5kC-EN-reP" secondAttribute="leading" id="VPN-nv-vlw"/>
+                            <constraint firstItem="yet-bo-Gme" firstAttribute="top" secondItem="5kC-EN-reP" secondAttribute="bottom" constant="30" id="VQY-56-b0E"/>
+                            <constraint firstItem="yet-bo-Gme" firstAttribute="trailing" secondItem="5kC-EN-reP" secondAttribute="trailing" id="beP-1c-8r9"/>
+                            <constraint firstItem="3n1-3e-k8k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="efo-y6-Ajx"/>
+                            <constraint firstItem="5kC-EN-reP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="hBO-vs-sjT"/>
+                            <constraint firstItem="5kC-EN-reP" firstAttribute="trailing" secondItem="MUp-Mi-gSe" secondAttribute="trailing" id="hnj-fV-qeQ"/>
+                            <constraint firstItem="5kC-EN-reP" firstAttribute="height" secondItem="MUp-Mi-gSe" secondAttribute="height" id="i0H-ee-JE4"/>
+                            <constraint firstItem="5kC-EN-reP" firstAttribute="top" secondItem="MUp-Mi-gSe" secondAttribute="bottom" constant="15" id="oSx-ex-GGf"/>
+                            <constraint firstItem="MUp-Mi-gSe" firstAttribute="top" secondItem="3n1-3e-k8k" secondAttribute="bottom" constant="50" id="wE1-eB-iXu"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
