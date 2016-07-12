@@ -1,13 +1,13 @@
-platform :ios, ‘9.0’
+platform :ios, '9.0'
 use_frameworks!
 
 def shared_pods
     pod 'PKHUD', '~> 3.1.0'
     pod 'RealmSwift'
-    pod ‘Charts’
+    pod 'Charts'
 end
 
-target ‘WMCReport’ do
+target 'WMCReport' do
     shared_pods
 end
 
