@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C1E407CB01DF230B555B95D /* Pods_WMCReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3382FB1B4B7C337168D49FB /* Pods_WMCReportTests.framework */; };
+		494D6BC74D05B71541E2D690 /* Pods_WMCReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC69BC1C0FD433CAD25BC84 /* Pods_WMCReport.framework */; };
+		6F56FAABF618C4D409D4DE52 /* Pods_WMCReportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3BCF94AEE5D26B221284C5 /* Pods_WMCReportUITests.framework */; };
+		A4A55F641D34ED4F002CE412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A55F631D34ED4F002CE412 /* AppDelegate.swift */; };
+		A4A55F661D34ED4F002CE412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A55F651D34ED4F002CE412 /* ViewController.swift */; };
+		A4A55F691D34ED4F002CE412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A55F671D34ED4F002CE412 /* Main.storyboard */; };
+		A4A55F6B1D34ED4F002CE412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A55F6A1D34ED4F002CE412 /* Assets.xcassets */; };
+		A4A55F6E1D34ED4F002CE412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A55F6C1D34ED4F002CE412 /* LaunchScreen.storyboard */; };
+		A4A55F791D34ED4F002CE412 /* WMCReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A55F781D34ED4F002CE412 /* WMCReportTests.swift */; };
+		A4A55F841D34ED4F002CE412 /* WMCReportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A55F831D34ED4F002CE412 /* WMCReportUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4A55F751D34ED4F002CE412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4A55F581D34ED4F002CE412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4A55F5F1D34ED4F002CE412;
+			remoteInfo = WMCReport;
+		};
+		A4A55F801D34ED4F002CE412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4A55F581D34ED4F002CE412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4A55F5F1D34ED4F002CE412;
+			remoteInfo = WMCReport;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25109371090F28F89ED9E8E0 /* Pods-WMCReportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReportTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReportTests/Pods-WMCReportTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2FC69BC1C0FD433CAD25BC84 /* Pods_WMCReport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		530E6B0574A420086D52174C /* Pods-WMCReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReport/Pods-WMCReport.debug.xcconfig"; sourceTree = "<group>"; };
+		6BFC3DC7F312F4352108E7BC /* Pods-WMCReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReportTests/Pods-WMCReportTests.release.xcconfig"; sourceTree = "<group>"; };
+		A4A55F601D34ED4F002CE412 /* WMCReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WMCReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4A55F631D34ED4F002CE412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4A55F651D34ED4F002CE412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4A55F681D34ED4F002CE412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4A55F6A1D34ED4F002CE412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4A55F6D1D34ED4F002CE412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4A55F6F1D34ED4F002CE412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4A55F741D34ED4F002CE412 /* WMCReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WMCReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4A55F781D34ED4F002CE412 /* WMCReportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMCReportTests.swift; sourceTree = "<group>"; };
+		A4A55F7A1D34ED4F002CE412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4A55F7F1D34ED4F002CE412 /* WMCReportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WMCReportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4A55F831D34ED4F002CE412 /* WMCReportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WMCReportUITests.swift; sourceTree = "<group>"; };
+		A4A55F851D34ED4F002CE412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC8A8D1A2D1F179437453846 /* Pods-WMCReportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReportUITests/Pods-WMCReportUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF3BCF94AEE5D26B221284C5 /* Pods_WMCReportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3382FB1B4B7C337168D49FB /* Pods_WMCReportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDF1054623D7A38364187EBE /* Pods-WMCReportUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReportUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReportUITests/Pods-WMCReportUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F8A10F722E49AA7870B2EBA0 /* Pods-WMCReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReport.release.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReport/Pods-WMCReport.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4A55F5D1D34ED4F002CE412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				494D6BC74D05B71541E2D690 /* Pods_WMCReport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4A55F711D34ED4F002CE412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C1E407CB01DF230B555B95D /* Pods_WMCReportTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4A55F7C1D34ED4F002CE412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F56FAABF618C4D409D4DE52 /* Pods_WMCReportUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6314C366F660177708DB9E68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				530E6B0574A420086D52174C /* Pods-WMCReport.debug.xcconfig */,
+				F8A10F722E49AA7870B2EBA0 /* Pods-WMCReport.release.xcconfig */,
+				25109371090F28F89ED9E8E0 /* Pods-WMCReportTests.debug.xcconfig */,
+				6BFC3DC7F312F4352108E7BC /* Pods-WMCReportTests.release.xcconfig */,
+				AC8A8D1A2D1F179437453846 /* Pods-WMCReportUITests.debug.xcconfig */,
+				EDF1054623D7A38364187EBE /* Pods-WMCReportUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4A55F571D34ED4F002CE412 = {
+			isa = PBXGroup;
+			children = (
+				A4A55F621D34ED4F002CE412 /* WMCReport */,
+				A4A55F771D34ED4F002CE412 /* WMCReportTests */,
+				A4A55F821D34ED4F002CE412 /* WMCReportUITests */,
+				A4A55F611D34ED4F002CE412 /* Products */,
+				6314C366F660177708DB9E68 /* Pods */,
+				E4EB7B8AC5715C7F2EC1EF7B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A4A55F611D34ED4F002CE412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4A55F601D34ED4F002CE412 /* WMCReport.app */,
+				A4A55F741D34ED4F002CE412 /* WMCReportTests.xctest */,
+				A4A55F7F1D34ED4F002CE412 /* WMCReportUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4A55F621D34ED4F002CE412 /* WMCReport */ = {
+			isa = PBXGroup;
+			children = (
+				A4A55F631D34ED4F002CE412 /* AppDelegate.swift */,
+				A4A55F651D34ED4F002CE412 /* ViewController.swift */,
+				A4A55F671D34ED4F002CE412 /* Main.storyboard */,
+				A4A55F6A1D34ED4F002CE412 /* Assets.xcassets */,
+				A4A55F6C1D34ED4F002CE412 /* LaunchScreen.storyboard */,
+				A4A55F6F1D34ED4F002CE412 /* Info.plist */,
+			);
+			path = WMCReport;
+			sourceTree = "<group>";
+		};
+		A4A55F771D34ED4F002CE412 /* WMCReportTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4A55F781D34ED4F002CE412 /* WMCReportTests.swift */,
+				A4A55F7A1D34ED4F002CE412 /* Info.plist */,
+			);
+			path = WMCReportTests;
+			sourceTree = "<group>";
+		};
+		A4A55F821D34ED4F002CE412 /* WMCReportUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4A55F831D34ED4F002CE412 /* WMCReportUITests.swift */,
+				A4A55F851D34ED4F002CE412 /* Info.plist */,
+			);
+			path = WMCReportUITests;
+			sourceTree = "<group>";
+		};
+		E4EB7B8AC5715C7F2EC1EF7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FC69BC1C0FD433CAD25BC84 /* Pods_WMCReport.framework */,
+				E3382FB1B4B7C337168D49FB /* Pods_WMCReportTests.framework */,
+				CF3BCF94AEE5D26B221284C5 /* Pods_WMCReportUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4A55F5F1D34ED4F002CE412 /* WMCReport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4A55F881D34ED4F002CE412 /* Build configuration list for PBXNativeTarget "WMCReport" */;
+			buildPhases = (
+				C75AFD2A16D80B22C916CA1A /* [CP] Check Pods Manifest.lock */,
+				A4A55F5C1D34ED4F002CE412 /* Sources */,
+				A4A55F5D1D34ED4F002CE412 /* Frameworks */,
+				A4A55F5E1D34ED4F002CE412 /* Resources */,
+				387694B4364F3E5B91E189F0 /* [CP] Embed Pods Frameworks */,
+				2AE98E1325182BB4600C80AE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WMCReport;
+			productName = WMCReport;
+			productReference = A4A55F601D34ED4F002CE412 /* WMCReport.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4A55F731D34ED4F002CE412 /* WMCReportTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4A55F8B1D34ED4F002CE412 /* Build configuration list for PBXNativeTarget "WMCReportTests" */;
+			buildPhases = (
+				26D3C75F7D16181126B63CC0 /* [CP] Check Pods Manifest.lock */,
+				A4A55F701D34ED4F002CE412 /* Sources */,
+				A4A55F711D34ED4F002CE412 /* Frameworks */,
+				A4A55F721D34ED4F002CE412 /* Resources */,
+				DBAE945D52AD86694ED7E7D9 /* [CP] Embed Pods Frameworks */,
+				2819247E07D401310EA584CB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4A55F761D34ED4F002CE412 /* PBXTargetDependency */,
+			);
+			name = WMCReportTests;
+			productName = WMCReportTests;
+			productReference = A4A55F741D34ED4F002CE412 /* WMCReportTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4A55F7E1D34ED4F002CE412 /* WMCReportUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4A55F8E1D34ED4F002CE412 /* Build configuration list for PBXNativeTarget "WMCReportUITests" */;
+			buildPhases = (
+				7305D9326EFAAE74244F0F56 /* [CP] Check Pods Manifest.lock */,
+				A4A55F7B1D34ED4F002CE412 /* Sources */,
+				A4A55F7C1D34ED4F002CE412 /* Frameworks */,
+				A4A55F7D1D34ED4F002CE412 /* Resources */,
+				1DBA14A6E45E119DCA0EF947 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4A55F811D34ED4F002CE412 /* PBXTargetDependency */,
+			);
+			name = WMCReportUITests;
+			productName = WMCReportUITests;
+			productReference = A4A55F7F1D34ED4F002CE412 /* WMCReportUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4A55F581D34ED4F002CE412 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Luân Trịnh";
+				TargetAttributes = {
+					A4A55F5F1D34ED4F002CE412 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					A4A55F731D34ED4F002CE412 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A4A55F5F1D34ED4F002CE412;
+					};
+					A4A55F7E1D34ED4F002CE412 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A4A55F5F1D34ED4F002CE412;
+					};
+				};
+			};
+			buildConfigurationList = A4A55F5B1D34ED4F002CE412 /* Build configuration list for PBXProject "WMCReport" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4A55F571D34ED4F002CE412;
+			productRefGroup = A4A55F611D34ED4F002CE412 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4A55F5F1D34ED4F002CE412 /* WMCReport */,
+				A4A55F731D34ED4F002CE412 /* WMCReportTests */,
+				A4A55F7E1D34ED4F002CE412 /* WMCReportUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4A55F5E1D34ED4F002CE412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4A55F6E1D34ED4F002CE412 /* LaunchScreen.storyboard in Resources */,
+				A4A55F6B1D34ED4F002CE412 /* Assets.xcassets in Resources */,
+				A4A55F691D34ED4F002CE412 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4A55F721D34ED4F002CE412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4A55F7D1D34ED4F002CE412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DBA14A6E45E119DCA0EF947 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WMCReportUITests/Pods-WMCReportUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26D3C75F7D16181126B63CC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2819247E07D401310EA584CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WMCReportTests/Pods-WMCReportTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AE98E1325182BB4600C80AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WMCReport/Pods-WMCReport-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		387694B4364F3E5B91E189F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WMCReport/Pods-WMCReport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7305D9326EFAAE74244F0F56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C75AFD2A16D80B22C916CA1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DBAE945D52AD86694ED7E7D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WMCReportTests/Pods-WMCReportTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4A55F5C1D34ED4F002CE412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4A55F661D34ED4F002CE412 /* ViewController.swift in Sources */,
+				A4A55F641D34ED4F002CE412 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4A55F701D34ED4F002CE412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4A55F791D34ED4F002CE412 /* WMCReportTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4A55F7B1D34ED4F002CE412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4A55F841D34ED4F002CE412 /* WMCReportUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4A55F761D34ED4F002CE412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4A55F5F1D34ED4F002CE412 /* WMCReport */;
+			targetProxy = A4A55F751D34ED4F002CE412 /* PBXContainerItemProxy */;
+		};
+		A4A55F811D34ED4F002CE412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4A55F5F1D34ED4F002CE412 /* WMCReport */;
+			targetProxy = A4A55F801D34ED4F002CE412 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4A55F671D34ED4F002CE412 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4A55F681D34ED4F002CE412 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A4A55F6C1D34ED4F002CE412 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4A55F6D1D34ED4F002CE412 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4A55F861D34ED4F002CE412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4A55F871D34ED4F002CE412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4A55F891D34ED4F002CE412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 530E6B0574A420086D52174C /* Pods-WMCReport.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WMCReport/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dinosys.WMCReport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A4A55F8A1D34ED4F002CE412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8A10F722E49AA7870B2EBA0 /* Pods-WMCReport.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WMCReport/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dinosys.WMCReport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A4A55F8C1D34ED4F002CE412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25109371090F28F89ED9E8E0 /* Pods-WMCReportTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WMCReportTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dinosys.WMCReportTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WMCReport.app/WMCReport";
+			};
+			name = Debug;
+		};
+		A4A55F8D1D34ED4F002CE412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BFC3DC7F312F4352108E7BC /* Pods-WMCReportTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WMCReportTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dinosys.WMCReportTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WMCReport.app/WMCReport";
+			};
+			name = Release;
+		};
+		A4A55F8F1D34ED4F002CE412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC8A8D1A2D1F179437453846 /* Pods-WMCReportUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = WMCReportUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dinosys.WMCReportUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WMCReport;
+			};
+			name = Debug;
+		};
+		A4A55F901D34ED4F002CE412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDF1054623D7A38364187EBE /* Pods-WMCReportUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = WMCReportUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dinosys.WMCReportUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WMCReport;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4A55F5B1D34ED4F002CE412 /* Build configuration list for PBXProject "WMCReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4A55F861D34ED4F002CE412 /* Debug */,
+				A4A55F871D34ED4F002CE412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4A55F881D34ED4F002CE412 /* Build configuration list for PBXNativeTarget "WMCReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4A55F891D34ED4F002CE412 /* Debug */,
+				A4A55F8A1D34ED4F002CE412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4A55F8B1D34ED4F002CE412 /* Build configuration list for PBXNativeTarget "WMCReportTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4A55F8C1D34ED4F002CE412 /* Debug */,
+				A4A55F8D1D34ED4F002CE412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4A55F8E1D34ED4F002CE412 /* Build configuration list for PBXNativeTarget "WMCReportUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4A55F8F1D34ED4F002CE412 /* Debug */,
+				A4A55F901D34ED4F002CE412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4A55F581D34ED4F002CE412 /* Project object */;
+}

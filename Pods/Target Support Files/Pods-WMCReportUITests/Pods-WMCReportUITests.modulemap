@@ -1,0 +1,6 @@
+framework module Pods_WMCReportUITests {
+  umbrella header "Pods-WMCReportUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
