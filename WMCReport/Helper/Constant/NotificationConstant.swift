@@ -13,37 +13,23 @@ struct NotificationConstants {
     
     struct ViewController {
         //Navigation
+        static let LoginViewController = "LoginViewController"
         
-        static let MainNavigationController = "MainNavigationController"
-        
-        static let ProfileViewController = "ProfileViewController"
-        
-        static let TimeTrackViewController = "TimeTrackViewController"
-        
-        static let LeaveFormContainerViewController = "LeaveFormContainerViewController"
-        
-        static let LeaveRequestViewController = "LeaveRequestViewController"
-        
-        static let LeaveBalanceViewController = "LeaveBalanceViewController"
+        static let ContainerViewController = "ContainerViewController"
         
         static let SWRevealViewController = "SWRevealViewController"
         
-        static let LoginViewController = "LoginViewController"
+        static let MenuCustomViewController = "MenuCustomViewController"
         
-        static let LeaveManagementEmployeeViewController = "LeaveManagementEmployeeViewController"
+        static let MenuViewController = "MenuViewController"
         
-        static let LeaveManagementAdminViewController = "LeaveManagementAdminViewController"
+        static let HomeViewController = "HomeViewController"
         
-        static let ApprovalViewController = "ApprovalViewController"
-        
-        static let AttendanceViewController = "AttendanceViewController"
-        
-        static let AttendanceAdminViewController = "AttendanceAdminViewController"
-        
-        static let AttendanceEmployeeViewController = "AttendanceEmployeeViewController"
-        
-        static let AttendanceAccessViewController = "AttendanceAccessViewController"
-        
-        static let QRImageCodeViewController = "QRImageCodeViewController"
+        static let FirstChartViewController = "FirstChartViewController"
+        static let SecondChartViewController = "SecondChartViewController"
+        static let ThirdChartViewController = "ThirdChartViewController"
+        static let FourthChartViewController = "FourthChartViewController"
+        static let FifthChartViewController = "FifthChartViewController"
+        static let SixthChartViewController = "SixthChartViewController"
     }
 }

@@ -10,8 +10,15 @@
 		1C1E407CB01DF230B555B95D /* Pods_WMCReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3382FB1B4B7C337168D49FB /* Pods_WMCReportTests.framework */; };
 		494D6BC74D05B71541E2D690 /* Pods_WMCReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC69BC1C0FD433CAD25BC84 /* Pods_WMCReport.framework */; };
 		6F56FAABF618C4D409D4DE52 /* Pods_WMCReportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3BCF94AEE5D26B221284C5 /* Pods_WMCReportUITests.framework */; };
+		A4597B4D1D35E32300ABEFAA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */; };
+		A4597B4F1D35EC5000ABEFAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B4E1D35EC5000ABEFAA /* HomeViewController.swift */; };
+		A4597B511D35EC5B00ABEFAA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B501D35EC5B00ABEFAA /* HomeViewModel.swift */; };
+		A4597B531D35ED2700ABEFAA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B521D35ED2700ABEFAA /* MenuViewController.swift */; };
+		A4597B551D35ED3500ABEFAA /* MenuCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B541D35ED3500ABEFAA /* MenuCustomViewController.swift */; };
+		A4597B571D35ED4D00ABEFAA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B561D35ED4D00ABEFAA /* LoginViewController.swift */; };
+		A4597B591D35ED5700ABEFAA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B581D35ED5700ABEFAA /* LoginViewModel.swift */; };
+		A4597B641D3620D500ABEFAA /* FirstChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B631D3620D500ABEFAA /* FirstChartViewController.swift */; };
 		A4A55F641D34ED4F002CE412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A55F631D34ED4F002CE412 /* AppDelegate.swift */; };
-		A4A55F661D34ED4F002CE412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A55F651D34ED4F002CE412 /* ViewController.swift */; };
 		A4A55F691D34ED4F002CE412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A55F671D34ED4F002CE412 /* Main.storyboard */; };
 		A4A55F6B1D34ED4F002CE412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A55F6A1D34ED4F002CE412 /* Assets.xcassets */; };
 		A4A55F6E1D34ED4F002CE412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A55F6C1D34ED4F002CE412 /* LaunchScreen.storyboard */; };
@@ -83,9 +90,17 @@
 		2FC69BC1C0FD433CAD25BC84 /* Pods_WMCReport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		530E6B0574A420086D52174C /* Pods-WMCReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReport/Pods-WMCReport.debug.xcconfig"; sourceTree = "<group>"; };
 		6BFC3DC7F312F4352108E7BC /* Pods-WMCReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReportTests/Pods-WMCReportTests.release.xcconfig"; sourceTree = "<group>"; };
+		A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		A4597B4E1D35EC5000ABEFAA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A4597B501D35EC5B00ABEFAA /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A4597B521D35ED2700ABEFAA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A4597B541D35ED3500ABEFAA /* MenuCustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomViewController.swift; sourceTree = "<group>"; };
+		A4597B561D35ED4D00ABEFAA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A4597B581D35ED5700ABEFAA /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A4597B5A1D35FAB500ABEFAA /* WMCReport-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WMCReport-Bridging-Header.h"; sourceTree = "<group>"; };
+		A4597B631D3620D500ABEFAA /* FirstChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstChartViewController.swift; sourceTree = "<group>"; };
 		A4A55F601D34ED4F002CE412 /* WMCReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WMCReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A55F631D34ED4F002CE412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4A55F651D34ED4F002CE412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4A55F681D34ED4F002CE412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4A55F6A1D34ED4F002CE412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4A55F6D1D34ED4F002CE412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -187,6 +202,70 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A4597B5B1D3620AF00ABEFAA /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				A4597B5C1D3620AF00ABEFAA /* Fifth */,
+				A4597B5D1D3620AF00ABEFAA /* First */,
+				A4597B5E1D3620AF00ABEFAA /* Fourth */,
+				A4597B5F1D3620AF00ABEFAA /* Second */,
+				A4597B601D3620AF00ABEFAA /* Sixth */,
+				A4597B611D3620AF00ABEFAA /* Third */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		A4597B5C1D3620AF00ABEFAA /* Fifth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fifth;
+			sourceTree = "<group>";
+		};
+		A4597B5D1D3620AF00ABEFAA /* First */ = {
+			isa = PBXGroup;
+			children = (
+				A4597B621D3620C400ABEFAA /* ViewController */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		A4597B5E1D3620AF00ABEFAA /* Fourth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fourth;
+			sourceTree = "<group>";
+		};
+		A4597B5F1D3620AF00ABEFAA /* Second */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		A4597B601D3620AF00ABEFAA /* Sixth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sixth;
+			sourceTree = "<group>";
+		};
+		A4597B611D3620AF00ABEFAA /* Third */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		A4597B621D3620C400ABEFAA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4597B631D3620D500ABEFAA /* FirstChartViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		A4A55F571D34ED4F002CE412 = {
 			isa = PBXGroup;
 			children = (
@@ -215,11 +294,11 @@
 				A4A55F911D34F9FB002CE412 /* Helper */,
 				A4A55FC01D34F9FB002CE412 /* Modules */,
 				A4A55F631D34ED4F002CE412 /* AppDelegate.swift */,
-				A4A55F651D34ED4F002CE412 /* ViewController.swift */,
 				A4A55F671D34ED4F002CE412 /* Main.storyboard */,
 				A4A55F6A1D34ED4F002CE412 /* Assets.xcassets */,
 				A4A55F6C1D34ED4F002CE412 /* LaunchScreen.storyboard */,
 				A4A55F6F1D34ED4F002CE412 /* Info.plist */,
+				A4597B5A1D35FAB500ABEFAA /* WMCReport-Bridging-Header.h */,
 			);
 			path = WMCReport;
 			sourceTree = "<group>";
@@ -319,6 +398,7 @@
 		A4A55FC01D34F9FB002CE412 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A4597B5B1D3620AF00ABEFAA /* Charts */,
 				A4A55FC11D34F9FB002CE412 /* Container */,
 				A4A55FC31D34F9FB002CE412 /* Home */,
 				A4A55FC61D34F9FB002CE412 /* Login */,
@@ -338,6 +418,7 @@
 		A4A55FC21D34F9FB002CE412 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -354,6 +435,7 @@
 		A4A55FC41D34F9FB002CE412 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A4597B4E1D35EC5000ABEFAA /* HomeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -361,6 +443,7 @@
 		A4A55FC51D34F9FB002CE412 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A4597B501D35EC5B00ABEFAA /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -377,6 +460,7 @@
 		A4A55FC71D34F9FB002CE412 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A4597B561D35ED4D00ABEFAA /* LoginViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -384,6 +468,7 @@
 		A4A55FC81D34F9FB002CE412 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A4597B581D35ED5700ABEFAA /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -399,6 +484,8 @@
 		A4A55FCA1D34F9FB002CE412 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A4597B521D35ED2700ABEFAA /* MenuViewController.swift */,
+				A4597B541D35ED3500ABEFAA /* MenuCustomViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -489,6 +576,7 @@
 				TargetAttributes = {
 					A4A55F5F1D34ED4F002CE412 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = P75L6RL67A;
 					};
 					A4A55F731D34ED4F002CE412 = {
 						CreatedOnToolsVersion = 7.3;
@@ -715,10 +803,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4A55F661D34ED4F002CE412 /* ViewController.swift in Sources */,
+				A4597B551D35ED3500ABEFAA /* MenuCustomViewController.swift in Sources */,
+				A4597B591D35ED5700ABEFAA /* LoginViewModel.swift in Sources */,
 				A4A55F641D34ED4F002CE412 /* AppDelegate.swift in Sources */,
+				A4597B511D35EC5B00ABEFAA /* HomeViewModel.swift in Sources */,
+				A4597B641D3620D500ABEFAA /* FirstChartViewController.swift in Sources */,
+				A4597B4D1D35E32300ABEFAA /* ContainerViewController.swift in Sources */,
 				A4A55FCB1D34F9FB002CE412 /* NotificationConstant.swift in Sources */,
 				A4A55FF41D34F9FB002CE412 /* SWRevealViewController.m in Sources */,
+				A4597B4F1D35EC5000ABEFAA /* HomeViewController.swift in Sources */,
+				A4597B571D35ED4D00ABEFAA /* LoginViewController.swift in Sources */,
+				A4597B531D35ED2700ABEFAA /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,10 +956,14 @@
 			baseConfigurationReference = 530E6B0574A420086D52174C /* Pods-WMCReport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WMCReport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dinosys.WMCReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WMCReport/WMCReport-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -873,10 +972,14 @@
 			baseConfigurationReference = F8A10F722E49AA7870B2EBA0 /* Pods-WMCReport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WMCReport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dinosys.WMCReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WMCReport/WMCReport-Bridging-Header.h";
 			};
 			name = Release;
 		};
