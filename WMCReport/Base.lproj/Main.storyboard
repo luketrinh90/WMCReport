@@ -19,6 +19,8 @@
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -88,7 +90,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Npw-bB-xPp" firstAttribute="top" secondItem="MUp-Mi-gSe" secondAttribute="bottom" constant="3" id="2uz-xz-ubN"/>
                             <constraint firstItem="6kT-bL-ZkD" firstAttribute="top" secondItem="5kC-EN-reP" secondAttribute="bottom" constant="3" id="8u1-27-Mip"/>
@@ -183,7 +185,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aob-zV-ALK">
                                 <rect key="frame" x="277" y="290" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dx5-F1-DKY">
@@ -203,7 +205,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="5rq-t9-CvZ"/>
                                     <constraint firstAttribute="bottom" secondItem="pxv-25-VRN" secondAttribute="bottom" id="94p-nh-eJp"/>
@@ -231,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsU-ZA-EhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2947" y="341"/>
+            <point key="canvasLocation" x="2815" y="341"/>
         </scene>
         <!--First Chart View Controller-->
         <scene sceneID="m4O-lE-qOj">
@@ -262,7 +264,7 @@
                                         <state key="normal" image="menu"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="d4F-uP-Zda" firstAttribute="top" secondItem="mVn-xz-zI1" secondAttribute="top" constant="20" id="JPj-K0-QDQ"/>
                                     <constraint firstItem="J81-2l-o2K" firstAttribute="leading" secondItem="mVn-xz-zI1" secondAttribute="leading" id="XfM-Yn-WnQ"/>
@@ -299,7 +301,208 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hG-Y2-af6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2947" y="1033"/>
+            <point key="canvasLocation" x="3473" y="341"/>
+        </scene>
+        <!--Third Chart View Controller-->
+        <scene sceneID="atD-Ht-KuO">
+            <objects>
+                <viewController storyboardIdentifier="ThirdChartViewController" id="aX6-Yt-KIV" customClass="ThirdChartViewController" customModule="WMCReport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gGK-49-f0H"/>
+                        <viewControllerLayoutGuide type="bottom" id="LJu-VS-ASr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Ny-ko-if6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poQ-0F-tcT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-m6-tQV">
+                                        <rect key="frame" x="0.0" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="uLE-ts-i2K"/>
+                                        </constraints>
+                                        <state key="normal" image="menu"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2M-CN-ko4">
+                                        <rect key="frame" x="258" y="20" width="85" height="45"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Dd0-fk-aZ0"/>
+                                    <constraint firstItem="U2M-CN-ko4" firstAttribute="centerX" secondItem="poQ-0F-tcT" secondAttribute="centerX" id="LID-UI-z5g"/>
+                                    <constraint firstAttribute="bottom" secondItem="U2M-CN-ko4" secondAttribute="bottom" id="NYK-Wp-8g3"/>
+                                    <constraint firstItem="U2M-CN-ko4" firstAttribute="top" secondItem="poQ-0F-tcT" secondAttribute="top" constant="20" id="PVV-Mw-1UT"/>
+                                    <constraint firstAttribute="bottom" secondItem="LXG-m6-tQV" secondAttribute="bottom" id="jVH-lz-Cw7"/>
+                                    <constraint firstItem="LXG-m6-tQV" firstAttribute="top" secondItem="poQ-0F-tcT" secondAttribute="top" constant="15" id="qbs-Mu-wwP"/>
+                                    <constraint firstItem="LXG-m6-tQV" firstAttribute="leading" secondItem="poQ-0F-tcT" secondAttribute="leading" id="rwP-ee-d4T"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQ5-xs-lzw" customClass="BubbleChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="65" width="600" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="MZj-h3-hDS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AQ5-xs-lzw" firstAttribute="top" secondItem="poQ-0F-tcT" secondAttribute="bottom" id="9Mi-T6-CUV"/>
+                            <constraint firstItem="poQ-0F-tcT" firstAttribute="top" secondItem="9Ny-ko-if6" secondAttribute="top" id="KQq-wN-dzg"/>
+                            <constraint firstItem="poQ-0F-tcT" firstAttribute="leading" secondItem="9Ny-ko-if6" secondAttribute="leading" id="Leq-Ke-0a3"/>
+                            <constraint firstItem="AQ5-xs-lzw" firstAttribute="leading" secondItem="9Ny-ko-if6" secondAttribute="leading" id="g7h-mc-w1K"/>
+                            <constraint firstAttribute="trailing" secondItem="AQ5-xs-lzw" secondAttribute="trailing" id="gvo-gU-sCi"/>
+                            <constraint firstAttribute="trailing" secondItem="poQ-0F-tcT" secondAttribute="trailing" id="pnD-yu-DIV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnMenu" destination="LXG-m6-tQV" id="vgi-PW-wVL"/>
+                        <outlet property="bubbleChartView" destination="AQ5-xs-lzw" id="LOR-iO-Obs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBO-hT-f3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3473" y="1016"/>
+        </scene>
+        <!--Second Chart View Controller-->
+        <scene sceneID="GNN-66-nIG">
+            <objects>
+                <viewController storyboardIdentifier="SecondChartViewController" id="VEK-IH-hbK" customClass="SecondChartViewController" customModule="WMCReport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vf6-NL-dg2"/>
+                        <viewControllerLayoutGuide type="bottom" id="6qj-6C-PUA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MCz-1O-crz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1R-n5-ZaB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnU-or-GeJ">
+                                        <rect key="frame" x="249" y="20" width="102" height="45"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cb-5D-HqM">
+                                        <rect key="frame" x="0.0" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="BrS-Rf-ZOl"/>
+                                        </constraints>
+                                        <state key="normal" image="menu"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="3Re-No-5eD"/>
+                                    <constraint firstItem="WnU-or-GeJ" firstAttribute="centerX" secondItem="o1R-n5-ZaB" secondAttribute="centerX" id="7dO-4u-aNM"/>
+                                    <constraint firstItem="4Cb-5D-HqM" firstAttribute="leading" secondItem="o1R-n5-ZaB" secondAttribute="leading" id="Dt9-Ws-3JR"/>
+                                    <constraint firstItem="4Cb-5D-HqM" firstAttribute="top" secondItem="o1R-n5-ZaB" secondAttribute="top" constant="15" id="a4i-N0-MI1"/>
+                                    <constraint firstItem="WnU-or-GeJ" firstAttribute="top" secondItem="o1R-n5-ZaB" secondAttribute="top" constant="20" id="d3I-6K-JjX"/>
+                                    <constraint firstAttribute="bottom" secondItem="WnU-or-GeJ" secondAttribute="bottom" id="fWZ-MG-sCG"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Cb-5D-HqM" secondAttribute="bottom" id="mV4-I2-2vX"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rz-Pd-OjH" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="65" width="600" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="9cl-fi-jOu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0rz-Pd-OjH" firstAttribute="leading" secondItem="MCz-1O-crz" secondAttribute="leading" id="47k-vF-zAg"/>
+                            <constraint firstAttribute="trailing" secondItem="o1R-n5-ZaB" secondAttribute="trailing" id="7dE-fv-XVM"/>
+                            <constraint firstAttribute="trailing" secondItem="0rz-Pd-OjH" secondAttribute="trailing" id="d3U-us-IBq"/>
+                            <constraint firstItem="o1R-n5-ZaB" firstAttribute="leading" secondItem="MCz-1O-crz" secondAttribute="leading" id="kSN-3Q-HT2"/>
+                            <constraint firstItem="0rz-Pd-OjH" firstAttribute="top" secondItem="o1R-n5-ZaB" secondAttribute="bottom" id="lB3-B1-iHR"/>
+                            <constraint firstItem="o1R-n5-ZaB" firstAttribute="top" secondItem="MCz-1O-crz" secondAttribute="top" id="w0i-oJ-zzt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnMenu" destination="4Cb-5D-HqM" id="ZIy-2j-i1k"/>
+                        <outlet property="lineChartView" destination="0rz-Pd-OjH" id="y4g-uo-smY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Tw-PM-80d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4125" y="341"/>
+        </scene>
+        <!--Fourth Chart View Controller-->
+        <scene sceneID="tzq-u2-c6E">
+            <objects>
+                <viewController storyboardIdentifier="FourthChartViewController" id="XWZ-BJ-ejc" customClass="FourthChartViewController" customModule="WMCReport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SoR-Ji-w8K"/>
+                        <viewControllerLayoutGuide type="bottom" id="S9W-Gp-RxB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HKa-gh-FfS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYR-Pd-2Z5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fourth Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqH-P9-2uw">
+                                        <rect key="frame" x="251" y="20" width="98" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciA-iN-gbU">
+                                        <rect key="frame" x="0.0" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Pej-kd-e6P"/>
+                                        </constraints>
+                                        <state key="normal" image="menu"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ciA-iN-gbU" secondAttribute="bottom" id="RTk-uD-g7P"/>
+                                    <constraint firstItem="lqH-P9-2uw" firstAttribute="top" secondItem="QYR-Pd-2Z5" secondAttribute="top" constant="20" id="UPH-VS-BCV"/>
+                                    <constraint firstItem="lqH-P9-2uw" firstAttribute="centerX" secondItem="QYR-Pd-2Z5" secondAttribute="centerX" id="WMm-qN-g3u"/>
+                                    <constraint firstAttribute="height" constant="65" id="amU-tL-VuC"/>
+                                    <constraint firstAttribute="bottom" secondItem="lqH-P9-2uw" secondAttribute="bottom" id="dlS-XC-dhI"/>
+                                    <constraint firstItem="ciA-iN-gbU" firstAttribute="leading" secondItem="QYR-Pd-2Z5" secondAttribute="leading" id="pTL-Fg-HI4"/>
+                                    <constraint firstItem="ciA-iN-gbU" firstAttribute="top" secondItem="QYR-Pd-2Z5" secondAttribute="top" constant="15" id="rUF-Tp-NP3"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBL-TX-19b" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="65" width="600" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="XtW-SP-t0y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cBL-TX-19b" secondAttribute="trailing" id="Mmk-GE-mvc"/>
+                            <constraint firstItem="QYR-Pd-2Z5" firstAttribute="leading" secondItem="HKa-gh-FfS" secondAttribute="leading" id="Tgo-YB-Dlf"/>
+                            <constraint firstItem="cBL-TX-19b" firstAttribute="top" secondItem="QYR-Pd-2Z5" secondAttribute="bottom" id="YAW-xh-5Bl"/>
+                            <constraint firstItem="QYR-Pd-2Z5" firstAttribute="top" secondItem="HKa-gh-FfS" secondAttribute="top" id="YNG-Rs-7dZ"/>
+                            <constraint firstItem="cBL-TX-19b" firstAttribute="leading" secondItem="HKa-gh-FfS" secondAttribute="leading" id="dvp-Mq-9Lc"/>
+                            <constraint firstAttribute="trailing" secondItem="QYR-Pd-2Z5" secondAttribute="trailing" id="yz4-cy-osB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnMenu" destination="ciA-iN-gbU" id="pKq-xI-AgD"/>
+                        <outlet property="lineChartView" destination="cBL-TX-19b" id="2Fr-Lr-8Ut"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="buj-lq-199" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4125" y="1016"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="CuZ-Ab-jAb">
@@ -338,7 +541,7 @@
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoP-qU-8sT">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
-                                <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="xrR-aS-7Qx"/>
                                 </constraints>

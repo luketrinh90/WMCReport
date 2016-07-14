@@ -66,6 +66,9 @@
 		A4A55FF21D34F9FB002CE412 /* MYRIADPRO-SEMIEXT_0.OTF in Resources */ = {isa = PBXBuildFile; fileRef = A4A55FBB1D34F9FB002CE412 /* MYRIADPRO-SEMIEXT_0.OTF */; };
 		A4A55FF31D34F9FB002CE412 /* MYRIADPRO-SEMIEXTIT_0.OTF in Resources */ = {isa = PBXBuildFile; fileRef = A4A55FBC1D34F9FB002CE412 /* MYRIADPRO-SEMIEXTIT_0.OTF */; };
 		A4A55FF41D34F9FB002CE412 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A55FBF1D34F9FB002CE412 /* SWRevealViewController.m */; };
+		A4E9AE141D37390F0034BD7C /* SecondChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */; };
+		A4E9AE1E1D3777080034BD7C /* ThirdChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */; };
+		A4E9AE201D378EA60034BD7C /* FourthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +157,9 @@
 		A4A55FBC1D34F9FB002CE412 /* MYRIADPRO-SEMIEXTIT_0.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MYRIADPRO-SEMIEXTIT_0.OTF"; sourceTree = "<group>"; };
 		A4A55FBE1D34F9FB002CE412 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A4A55FBF1D34F9FB002CE412 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondChartViewController.swift; sourceTree = "<group>"; };
+		A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdChartViewController.swift; sourceTree = "<group>"; };
+		A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthChartViewController.swift; sourceTree = "<group>"; };
 		AC8A8D1A2D1F179437453846 /* Pods-WMCReportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReportUITests/Pods-WMCReportUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF3BCF94AEE5D26B221284C5 /* Pods_WMCReportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3382FB1B4B7C337168D49FB /* Pods_WMCReportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +224,7 @@
 		A4597B5C1D3620AF00ABEFAA /* Fifth */ = {
 			isa = PBXGroup;
 			children = (
+				A4E9AE0E1D3738500034BD7C /* ViewController */,
 			);
 			path = Fifth;
 			sourceTree = "<group>";
@@ -233,6 +240,7 @@
 		A4597B5E1D3620AF00ABEFAA /* Fourth */ = {
 			isa = PBXGroup;
 			children = (
+				A4E9AE0F1D3738570034BD7C /* ViewController */,
 			);
 			path = Fourth;
 			sourceTree = "<group>";
@@ -240,6 +248,7 @@
 		A4597B5F1D3620AF00ABEFAA /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				A4E9AE101D37385C0034BD7C /* ViewController */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -247,6 +256,7 @@
 		A4597B601D3620AF00ABEFAA /* Sixth */ = {
 			isa = PBXGroup;
 			children = (
+				A4E9AE111D3738620034BD7C /* ViewController */,
 			);
 			path = Sixth;
 			sourceTree = "<group>";
@@ -254,6 +264,7 @@
 		A4597B611D3620AF00ABEFAA /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				A4E9AE121D3738670034BD7C /* ViewController */,
 			);
 			path = Third;
 			sourceTree = "<group>";
@@ -486,6 +497,44 @@
 			children = (
 				A4597B521D35ED2700ABEFAA /* MenuViewController.swift */,
 				A4597B541D35ED3500ABEFAA /* MenuCustomViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A4E9AE0E1D3738500034BD7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A4E9AE0F1D3738570034BD7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A4E9AE101D37385C0034BD7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A4E9AE111D3738620034BD7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A4E9AE121D3738670034BD7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -812,8 +861,11 @@
 				A4A55FCB1D34F9FB002CE412 /* NotificationConstant.swift in Sources */,
 				A4A55FF41D34F9FB002CE412 /* SWRevealViewController.m in Sources */,
 				A4597B4F1D35EC5000ABEFAA /* HomeViewController.swift in Sources */,
+				A4E9AE201D378EA60034BD7C /* FourthChartViewController.swift in Sources */,
 				A4597B571D35ED4D00ABEFAA /* LoginViewController.swift in Sources */,
+				A4E9AE1E1D3777080034BD7C /* ThirdChartViewController.swift in Sources */,
 				A4597B531D35ED2700ABEFAA /* MenuViewController.swift in Sources */,
+				A4E9AE141D37390F0034BD7C /* SecondChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

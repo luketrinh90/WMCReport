@@ -24,18 +24,22 @@ class MenuCustomViewController: UIViewController {
     }
     
     @IBAction func onSecondChartPressed(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationConstants.Navigation.kNotificationRequestNavigation, object: NotificationConstants.ViewController.SecondChartViewController)
     }
     
-    
     @IBAction func onThirdChartPressed(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationConstants.Navigation.kNotificationRequestNavigation, object: NotificationConstants.ViewController.ThirdChartViewController)
     }
     
     @IBAction func onFourthChartPressed(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationConstants.Navigation.kNotificationRequestNavigation, object: NotificationConstants.ViewController.FourthChartViewController)
     }
     
     @IBAction func onFifthChartPressed(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationConstants.Navigation.kNotificationRequestNavigation, object: NotificationConstants.ViewController.FifthChartViewController)
     }
     
     @IBAction func onSixthChartPressed(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationConstants.Navigation.kNotificationRequestNavigation, object: NotificationConstants.ViewController.SixthChartViewController)
     }
 }
