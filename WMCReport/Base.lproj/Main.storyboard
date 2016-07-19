@@ -21,6 +21,7 @@
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -368,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBO-hT-f3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3473" y="1016"/>
+            <point key="canvasLocation" x="4765" y="341"/>
         </scene>
         <!--Second Chart View Controller-->
         <scene sceneID="GNN-66-nIG">
@@ -502,7 +503,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buj-lq-199" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4125" y="1016"/>
+            <point key="canvasLocation" x="3473" y="1008"/>
+        </scene>
+        <!--Fifth Chart View Controller-->
+        <scene sceneID="vTX-m4-7BX">
+            <objects>
+                <viewController storyboardIdentifier="FifthChartViewController" id="oXj-OM-GC7" customClass="FifthChartViewController" customModule="WMCReport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vHu-qj-EN4"/>
+                        <viewControllerLayoutGuide type="bottom" id="iS1-jq-QvD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CSw-86-s7K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yc-7N-va0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-6M-i4N">
+                                        <rect key="frame" x="0.0" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Vbe-JH-gPk"/>
+                                        </constraints>
+                                        <state key="normal" image="menu"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fifth Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3p-Jj-e9O">
+                                        <rect key="frame" x="260" y="20" width="80" height="45"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="LgA-6M-i4N" firstAttribute="top" secondItem="9Yc-7N-va0" secondAttribute="top" constant="15" id="Nfy-MH-6he"/>
+                                    <constraint firstItem="LgA-6M-i4N" firstAttribute="leading" secondItem="9Yc-7N-va0" secondAttribute="leading" id="UXT-UY-65j"/>
+                                    <constraint firstItem="M3p-Jj-e9O" firstAttribute="centerX" secondItem="9Yc-7N-va0" secondAttribute="centerX" id="exZ-QA-03h"/>
+                                    <constraint firstAttribute="height" constant="65" id="fBb-21-UDZ"/>
+                                    <constraint firstItem="M3p-Jj-e9O" firstAttribute="top" secondItem="9Yc-7N-va0" secondAttribute="top" constant="20" id="hVg-6Y-wsJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="M3p-Jj-e9O" secondAttribute="bottom" id="o2B-0t-JTF"/>
+                                    <constraint firstAttribute="bottom" secondItem="LgA-6M-i4N" secondAttribute="bottom" id="zyo-yV-QGC"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qS-pg-PIn" customClass="CombinedChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="65" width="600" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="qul-Ua-Yc4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8qS-pg-PIn" firstAttribute="leading" secondItem="CSw-86-s7K" secondAttribute="leading" id="2cf-67-l97"/>
+                            <constraint firstItem="9Yc-7N-va0" firstAttribute="leading" secondItem="CSw-86-s7K" secondAttribute="leading" id="JZW-we-hoN"/>
+                            <constraint firstAttribute="trailing" secondItem="9Yc-7N-va0" secondAttribute="trailing" id="OQ8-MY-YIR"/>
+                            <constraint firstItem="9Yc-7N-va0" firstAttribute="top" secondItem="CSw-86-s7K" secondAttribute="top" id="aB8-b5-Dov"/>
+                            <constraint firstAttribute="trailing" secondItem="8qS-pg-PIn" secondAttribute="trailing" id="jLm-8g-Tqa"/>
+                            <constraint firstItem="8qS-pg-PIn" firstAttribute="top" secondItem="9Yc-7N-va0" secondAttribute="bottom" id="y86-9t-PPe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnMenu" destination="LgA-6M-i4N" id="rXz-r0-xbU"/>
+                        <outlet property="combinedChartView" destination="8qS-pg-PIn" id="4JT-1Q-9IA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UP7-m6-gJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4125" y="1008"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="CuZ-Ab-jAb">
