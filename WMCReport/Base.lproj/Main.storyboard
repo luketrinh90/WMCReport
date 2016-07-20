@@ -572,6 +572,69 @@
             </objects>
             <point key="canvasLocation" x="4125" y="1008"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fkQ-me-bok">
+            <objects>
+                <viewController id="SiS-BI-bXM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eLD-EW-OJW"/>
+                        <viewControllerLayoutGuide type="bottom" id="0lk-x5-C9j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6NL-Gz-Kcl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJf-od-LkL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW5-Mc-SSF">
+                                        <rect key="frame" x="0.0" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="mCn-5T-dEj"/>
+                                        </constraints>
+                                        <state key="normal" image="menu"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sixth Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-re-rqY">
+                                        <rect key="frame" x="257" y="20" width="86" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ssf-re-rqY" firstAttribute="centerX" secondItem="HJf-od-LkL" secondAttribute="centerX" id="DKc-Kh-orw"/>
+                                    <constraint firstItem="zW5-Mc-SSF" firstAttribute="top" secondItem="HJf-od-LkL" secondAttribute="top" constant="15" id="K7u-w7-g0h"/>
+                                    <constraint firstItem="Ssf-re-rqY" firstAttribute="top" secondItem="HJf-od-LkL" secondAttribute="top" constant="20" id="MyK-qi-h4q"/>
+                                    <constraint firstAttribute="bottom" secondItem="zW5-Mc-SSF" secondAttribute="bottom" id="Ubw-Fm-1P1"/>
+                                    <constraint firstItem="zW5-Mc-SSF" firstAttribute="leading" secondItem="HJf-od-LkL" secondAttribute="leading" id="bAD-CR-enV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ssf-re-rqY" secondAttribute="bottom" id="jBP-TW-NYa"/>
+                                    <constraint firstAttribute="height" constant="65" id="z2G-bL-p2C"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hwk-jX-vd2">
+                                <rect key="frame" x="0.0" y="65" width="600" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Rjy-Vv-cmn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HJf-od-LkL" firstAttribute="leading" secondItem="6NL-Gz-Kcl" secondAttribute="leading" id="BkI-su-Ncp"/>
+                            <constraint firstItem="Hwk-jX-vd2" firstAttribute="top" secondItem="HJf-od-LkL" secondAttribute="bottom" id="DTH-tG-40o"/>
+                            <constraint firstAttribute="trailing" secondItem="HJf-od-LkL" secondAttribute="trailing" id="f4X-vh-03u"/>
+                            <constraint firstItem="Hwk-jX-vd2" firstAttribute="leading" secondItem="6NL-Gz-Kcl" secondAttribute="leading" id="hMW-NS-6qN"/>
+                            <constraint firstAttribute="trailing" secondItem="Hwk-jX-vd2" secondAttribute="trailing" id="keT-kP-hmg"/>
+                            <constraint firstItem="HJf-od-LkL" firstAttribute="top" secondItem="6NL-Gz-Kcl" secondAttribute="top" id="xHR-9L-8w9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oij-YW-hQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4765" y="1008"/>
+        </scene>
         <!--Reveal View Controller-->
         <scene sceneID="CuZ-Ab-jAb">
             <objects>
