@@ -8,12 +8,18 @@
 
 import UIKit
 import Charts
+import RealmSwift
+import ActionSheetPicker_3_0
 
 class SecondChartViewController: UIViewController {
     
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var lineChartView: LineChartView!
-    var months: [String]?
+    let realm = try! Realm()
+    
+    var months: [String] = []
+    var set1: [Double] = []
+    var set2: [Double] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +38,32 @@ class SecondChartViewController: UIViewController {
     }
     
     func initFirst() {
-        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let set1 = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-        let set2 = [50.0, 30.0, 10.0, 15.0, 25.0, 20.0, 17.0, 39.0, 32.0, 46.0, 57.0, 1.0]
+        let fakeMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        let fakeSet1 = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+        let fakeSet2 = [50.0, 30.0, 10.0, 15.0, 25.0, 20.0, 17.0, 39.0, 32.0, 46.0, 57.0, 1.0]
         
-        setChart(months!, set1: set1, set2: set2)
+        if realm.objects(Second).count == 0 {
+            for i in 0...11 {
+                let obj = Second()
+                obj.id = obj.incrementID()
+                obj.monthNumber = i + 1
+                obj.monthString = fakeMonths[i]
+                obj.valueSet1 = fakeSet1[i]
+                obj.valueSet2 = fakeSet2[i]
+                
+                try! realm.write {
+                    realm.add(obj)
+                }
+            }
+        }
+        
+        for i in 0..<realm.objects(Second).count {
+            months.append(realm.objects(Second)[i].monthString)
+            set1.append(realm.objects(Second)[i].valueSet1)
+            set2.append(realm.objects(Second)[i].valueSet2)
+        }
+        
+        setChart(months, set1: set1, set2: set2)
     }
     
     func setChart(months : [String], set1: [Double], set2: [Double]) {
@@ -88,5 +115,31 @@ class SecondChartViewController: UIViewController {
         //5 - finally set our data
         lineChartView.data = data
         lineChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .Linear)
+    }
+    
+    @IBAction func onOptionPressed(sender: AnyObject) {
+        ActionSheetStringPicker.showPickerWithTitle("Options", rows: ["General", "By Month", "By City", "By Gender", "By Age", "By Nationality"], initialSelection: 0, doneBlock: {
+            picker, value, index in
+            
+            print("value = \(value)")
+            print("index = \(index)")
+            print("picker = \(picker)")
+            
+            self.random()
+            self.setChart(self.months, set1: self.set1, set2: self.set2)
+            
+            return
+            }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
+    }
+    
+    func random() {
+        for i in 0...11 {
+            set1[i] = Double(randRange(0, upper: 100))
+            set2[i] = Double(randRange(0, upper: 100))
+        }
+    }
+    
+    func randRange(lower: Int , upper: Int) -> Int {
+        return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
     }
 }

@@ -10,6 +10,9 @@
 		1C1E407CB01DF230B555B95D /* Pods_WMCReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3382FB1B4B7C337168D49FB /* Pods_WMCReportTests.framework */; };
 		494D6BC74D05B71541E2D690 /* Pods_WMCReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC69BC1C0FD433CAD25BC84 /* Pods_WMCReport.framework */; };
 		6F56FAABF618C4D409D4DE52 /* Pods_WMCReportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3BCF94AEE5D26B221284C5 /* Pods_WMCReportUITests.framework */; };
+		A40331481D460C5C00991F97 /* ThirdChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40331471D460C5C00991F97 /* ThirdChartModel.swift */; };
+		A403314A1D46119100991F97 /* FourthChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40331491D46119100991F97 /* FourthChartModel.swift */; };
+		A403314C1D46195B00991F97 /* FifthChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403314B1D46195B00991F97 /* FifthChartModel.swift */; };
 		A41008901D389BCD00B57D4E /* FifthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410088F1D389BCD00B57D4E /* FifthChartViewController.swift */; };
 		A4169C061D3F21030066F8A9 /* SixthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4169C051D3F21030066F8A9 /* SixthChartViewController.swift */; };
 		A4597B4D1D35E32300ABEFAA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */; };
@@ -71,6 +74,8 @@
 		A4E9AE141D37390F0034BD7C /* SecondChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */; };
 		A4E9AE1E1D3777080034BD7C /* ThirdChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */; };
 		A4E9AE201D378EA60034BD7C /* FourthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */; };
+		A4FECE411D408A710037A6C8 /* FirstChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FECE401D408A700037A6C8 /* FirstChartModel.swift */; };
+		A4FECE431D40A52D0037A6C8 /* SecondChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FECE421D40A52D0037A6C8 /* SecondChartModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,9 @@
 		2FC69BC1C0FD433CAD25BC84 /* Pods_WMCReport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		530E6B0574A420086D52174C /* Pods-WMCReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReport/Pods-WMCReport.debug.xcconfig"; sourceTree = "<group>"; };
 		6BFC3DC7F312F4352108E7BC /* Pods-WMCReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReportTests/Pods-WMCReportTests.release.xcconfig"; sourceTree = "<group>"; };
+		A40331471D460C5C00991F97 /* ThirdChartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdChartModel.swift; sourceTree = "<group>"; };
+		A40331491D46119100991F97 /* FourthChartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthChartModel.swift; sourceTree = "<group>"; };
+		A403314B1D46195B00991F97 /* FifthChartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthChartModel.swift; sourceTree = "<group>"; };
 		A410088F1D389BCD00B57D4E /* FifthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthChartViewController.swift; sourceTree = "<group>"; };
 		A4169C051D3F21030066F8A9 /* SixthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixthChartViewController.swift; sourceTree = "<group>"; };
 		A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +172,8 @@
 		A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondChartViewController.swift; sourceTree = "<group>"; };
 		A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdChartViewController.swift; sourceTree = "<group>"; };
 		A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthChartViewController.swift; sourceTree = "<group>"; };
+		A4FECE401D408A700037A6C8 /* FirstChartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstChartModel.swift; sourceTree = "<group>"; };
+		A4FECE421D40A52D0037A6C8 /* SecondChartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondChartModel.swift; sourceTree = "<group>"; };
 		AC8A8D1A2D1F179437453846 /* Pods-WMCReportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReportUITests/Pods-WMCReportUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF3BCF94AEE5D26B221284C5 /* Pods_WMCReportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3382FB1B4B7C337168D49FB /* Pods_WMCReportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,6 +316,7 @@
 		A4A55F621D34ED4F002CE412 /* WMCReport */ = {
 			isa = PBXGroup;
 			children = (
+				A4FECE391D4086700037A6C8 /* Models */,
 				A4A55F911D34F9FB002CE412 /* Helper */,
 				A4A55FC01D34F9FB002CE412 /* Modules */,
 				A4A55F631D34ED4F002CE412 /* AppDelegate.swift */,
@@ -543,6 +554,66 @@
 				A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A4FECE391D4086700037A6C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4FECE3A1D4086700037A6C8 /* Fifth */,
+				A4FECE3B1D4086700037A6C8 /* First */,
+				A4FECE3C1D4086700037A6C8 /* Fourth */,
+				A4FECE3D1D4086700037A6C8 /* Second */,
+				A4FECE3E1D4086700037A6C8 /* Sixth */,
+				A4FECE3F1D4086700037A6C8 /* Third */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4FECE3A1D4086700037A6C8 /* Fifth */ = {
+			isa = PBXGroup;
+			children = (
+				A403314B1D46195B00991F97 /* FifthChartModel.swift */,
+			);
+			path = Fifth;
+			sourceTree = "<group>";
+		};
+		A4FECE3B1D4086700037A6C8 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				A4FECE401D408A700037A6C8 /* FirstChartModel.swift */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		A4FECE3C1D4086700037A6C8 /* Fourth */ = {
+			isa = PBXGroup;
+			children = (
+				A40331491D46119100991F97 /* FourthChartModel.swift */,
+			);
+			path = Fourth;
+			sourceTree = "<group>";
+		};
+		A4FECE3D1D4086700037A6C8 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				A4FECE421D40A52D0037A6C8 /* SecondChartModel.swift */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		A4FECE3E1D4086700037A6C8 /* Sixth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sixth;
+			sourceTree = "<group>";
+		};
+		A4FECE3F1D4086700037A6C8 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				A40331471D460C5C00991F97 /* ThirdChartModel.swift */,
+			);
+			path = Third;
 			sourceTree = "<group>";
 		};
 		E4EB7B8AC5715C7F2EC1EF7B /* Frameworks */ = {
@@ -866,14 +937,19 @@
 				A4597B4D1D35E32300ABEFAA /* ContainerViewController.swift in Sources */,
 				A4A55FCB1D34F9FB002CE412 /* NotificationConstant.swift in Sources */,
 				A4A55FF41D34F9FB002CE412 /* SWRevealViewController.m in Sources */,
+				A403314A1D46119100991F97 /* FourthChartModel.swift in Sources */,
 				A4597B4F1D35EC5000ABEFAA /* HomeViewController.swift in Sources */,
 				A4E9AE201D378EA60034BD7C /* FourthChartViewController.swift in Sources */,
 				A4169C061D3F21030066F8A9 /* SixthChartViewController.swift in Sources */,
 				A4597B571D35ED4D00ABEFAA /* LoginViewController.swift in Sources */,
 				A4E9AE1E1D3777080034BD7C /* ThirdChartViewController.swift in Sources */,
 				A41008901D389BCD00B57D4E /* FifthChartViewController.swift in Sources */,
+				A4FECE431D40A52D0037A6C8 /* SecondChartModel.swift in Sources */,
 				A4597B531D35ED2700ABEFAA /* MenuViewController.swift in Sources */,
 				A4E9AE141D37390F0034BD7C /* SecondChartViewController.swift in Sources */,
+				A40331481D460C5C00991F97 /* ThirdChartModel.swift in Sources */,
+				A4FECE411D408A710037A6C8 /* FirstChartModel.swift in Sources */,
+				A403314C1D46195B00991F97 /* FifthChartModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

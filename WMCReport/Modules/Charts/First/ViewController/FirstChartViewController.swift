@@ -8,12 +8,17 @@
 
 import UIKit
 import Charts
+import RealmSwift
+import ActionSheetPicker_3_0
 
 class FirstChartViewController: UIViewController {
     
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var barChartView: BarChartView!
-    var months: [String]?
+    let realm = try! Realm()
+    
+    var months: [String] = []
+    var unitsSold: [Double] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +37,28 @@ class FirstChartViewController: UIViewController {
     }
     
     func initFirst() {
-        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+        let fakeMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        let fakeUnitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
         
-        setChart(months!, values: unitsSold)
+        if realm.objects(First).count == 0 {
+            for i in 0...11 {
+                let obj = First()
+                obj.id = obj.incrementID()
+                obj.monthNumber = i + 1
+                obj.monthString = fakeMonths[i]
+                obj.value = fakeUnitsSold[i]
+                
+                try! realm.write {
+                    realm.add(obj)
+                }
+            }
+        }
+        
+        for i in 0..<realm.objects(First).count {
+            months.append(realm.objects(First)[i].monthString)
+            unitsSold.append(realm.objects(First)[i].value)
+        }
+        setChart(months, values: unitsSold)
     }
     
     func setChart(dataPoints: [String], values: [Double]) {
@@ -49,9 +72,34 @@ class FirstChartViewController: UIViewController {
         }
         
         let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Sold")
-        let chartData = BarChartData(xVals: months, dataSet: chartDataSet)
+        let chartData = BarChartData(xVals: dataPoints, dataSet: chartDataSet)
         chartDataSet.colors = ChartColorTemplates.vordiplom()
         barChartView.data = chartData
         barChartView.animate(yAxisDuration: 2, easingOption: .EaseOutBounce)
+    }
+    
+    @IBAction func onOptionPressed(sender: AnyObject) {
+        ActionSheetStringPicker.showPickerWithTitle("Options", rows: ["General", "By Month", "By City", "By Gender", "By Age", "By Nationality"], initialSelection: 0, doneBlock: {
+            picker, value, index in
+            
+            print("value = \(value)")
+            print("index = \(index)")
+            print("picker = \(picker)")
+            
+            self.random()
+            self.setChart(self.months, values: self.unitsSold)
+            
+            return
+            }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
+    }
+    
+    func random() {
+        for i in 0...11 {
+            unitsSold[i] = Double(randRange(0, upper: 100))
+        }
+    }
+    
+    func randRange(lower: Int , upper: Int) -> Int {
+        return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
     }
 }
