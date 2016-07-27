@@ -15,6 +15,7 @@
 		A403314C1D46195B00991F97 /* FifthChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A403314B1D46195B00991F97 /* FifthChartModel.swift */; };
 		A41008901D389BCD00B57D4E /* FifthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410088F1D389BCD00B57D4E /* FifthChartViewController.swift */; };
 		A4169C061D3F21030066F8A9 /* SixthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4169C051D3F21030066F8A9 /* SixthChartViewController.swift */; };
+		A41C9DF91D4743790052C547 /* SixthChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41C9DF81D4743790052C547 /* SixthChartModel.swift */; };
 		A4597B4D1D35E32300ABEFAA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */; };
 		A4597B4F1D35EC5000ABEFAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B4E1D35EC5000ABEFAA /* HomeViewController.swift */; };
 		A4597B511D35EC5B00ABEFAA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B501D35EC5B00ABEFAA /* HomeViewModel.swift */; };
@@ -105,6 +106,7 @@
 		A403314B1D46195B00991F97 /* FifthChartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthChartModel.swift; sourceTree = "<group>"; };
 		A410088F1D389BCD00B57D4E /* FifthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthChartViewController.swift; sourceTree = "<group>"; };
 		A4169C051D3F21030066F8A9 /* SixthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixthChartViewController.swift; sourceTree = "<group>"; };
+		A41C9DF81D4743790052C547 /* SixthChartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixthChartModel.swift; sourceTree = "<group>"; };
 		A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		A4597B4E1D35EC5000ABEFAA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A4597B501D35EC5B00ABEFAA /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -604,6 +606,7 @@
 		A4FECE3E1D4086700037A6C8 /* Sixth */ = {
 			isa = PBXGroup;
 			children = (
+				A41C9DF81D4743790052C547 /* SixthChartModel.swift */,
 			);
 			path = Sixth;
 			sourceTree = "<group>";
@@ -950,6 +953,7 @@
 				A40331481D460C5C00991F97 /* ThirdChartModel.swift in Sources */,
 				A4FECE411D408A710037A6C8 /* FirstChartModel.swift in Sources */,
 				A403314C1D46195B00991F97 /* FifthChartModel.swift in Sources */,
+				A41C9DF91D4743790052C547 /* SixthChartModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

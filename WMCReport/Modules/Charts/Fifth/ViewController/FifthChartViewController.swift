@@ -91,12 +91,12 @@ class FifthChartViewController: UIViewController {
         //
         let barChartSet: BarChartDataSet = BarChartDataSet(yVals: yVals2, label: "Bar Data")
         
-        
         let data: CombinedChartData = CombinedChartData(xVals: xValues)
         data.barData = BarChartData(xVals: xValues, dataSets: [barChartSet])
         data.lineData = LineChartData(xVals: xValues, dataSets: [lineChartSet])
         
         combinedChartView.data = data
+        combinedChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .Linear)
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {

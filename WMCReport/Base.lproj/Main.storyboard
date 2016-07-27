@@ -27,6 +27,7 @@
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -584,7 +585,7 @@
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qS-pg-PIn" customClass="CombinedChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="65" width="600" height="443"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuC-iR-rwJ">
                                 <rect key="frame" x="234" y="538" width="133" height="32"/>
@@ -657,26 +658,35 @@
                                     <constraint firstAttribute="height" constant="65" id="z2G-bL-p2C"/>
                                 </constraints>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hwk-jX-vd2">
-                                <rect key="frame" x="0.0" y="65" width="600" height="250"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Rjy-Vv-cmn"/>
-                                </constraints>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hwk-jX-vd2" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="65" width="600" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R02-YW-3Km">
+                                <rect key="frame" x="234" y="538" width="133" height="32"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
+                                <state key="normal" title="FILTER OPTIONS"/>
+                                <connections>
+                                    <action selector="onOptionPressed:" destination="SiS-BI-bXM" eventType="touchUpInside" id="lqU-mL-Z66"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Hwk-jX-vd2" secondAttribute="trailing" id="9gA-ab-awk"/>
                             <constraint firstItem="HJf-od-LkL" firstAttribute="leading" secondItem="6NL-Gz-Kcl" secondAttribute="leading" id="BkI-su-Ncp"/>
-                            <constraint firstItem="Hwk-jX-vd2" firstAttribute="top" secondItem="HJf-od-LkL" secondAttribute="bottom" id="DTH-tG-40o"/>
+                            <constraint firstItem="0lk-x5-C9j" firstAttribute="top" secondItem="R02-YW-3Km" secondAttribute="bottom" constant="30" id="HS7-OC-C4N"/>
+                            <constraint firstItem="R02-YW-3Km" firstAttribute="centerX" secondItem="6NL-Gz-Kcl" secondAttribute="centerX" id="NCc-9R-e1i"/>
+                            <constraint firstItem="R02-YW-3Km" firstAttribute="top" secondItem="Hwk-jX-vd2" secondAttribute="bottom" constant="30" id="OmO-7M-SMM"/>
                             <constraint firstAttribute="trailing" secondItem="HJf-od-LkL" secondAttribute="trailing" id="f4X-vh-03u"/>
-                            <constraint firstItem="Hwk-jX-vd2" firstAttribute="leading" secondItem="6NL-Gz-Kcl" secondAttribute="leading" id="hMW-NS-6qN"/>
-                            <constraint firstAttribute="trailing" secondItem="Hwk-jX-vd2" secondAttribute="trailing" id="keT-kP-hmg"/>
+                            <constraint firstItem="Hwk-jX-vd2" firstAttribute="top" secondItem="HJf-od-LkL" secondAttribute="bottom" id="ul6-15-5dj"/>
                             <constraint firstItem="HJf-od-LkL" firstAttribute="top" secondItem="6NL-Gz-Kcl" secondAttribute="top" id="xHR-9L-8w9"/>
+                            <constraint firstItem="Hwk-jX-vd2" firstAttribute="leading" secondItem="6NL-Gz-Kcl" secondAttribute="leading" id="yFm-fV-SCZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnMenu" destination="zW5-Mc-SSF" id="Koe-Oc-FS6"/>
+                        <outlet property="pieChartView" destination="Hwk-jX-vd2" id="kSY-7j-j1K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oij-YW-hQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
