@@ -72,10 +72,29 @@ class FirstChartViewController: UIViewController {
         }
         
         let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Sold")
+        chartDataSet.colors = ChartColorTemplates.pastel()
+        chartDataSet.valueTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
+        
         let chartData = BarChartData(xVals: dataPoints, dataSet: chartDataSet)
-        chartDataSet.colors = ChartColorTemplates.vordiplom()
+        chartData.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
+        
         barChartView.data = chartData
         barChartView.animate(yAxisDuration: 2, easingOption: .EaseOutBounce)
+        barChartView.descriptionText = ""
+        
+        barChartView.xAxis.labelPosition = .Bottom
+        barChartView.xAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
+        barChartView.leftAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
+        
+        barChartView.rightAxis.enabled = false
+        
+        // grid lines
+        barChartView.xAxis.drawAxisLineEnabled = false
+        barChartView.xAxis.drawGridLinesEnabled = false
+        barChartView.leftAxis.drawAxisLineEnabled = false
+        barChartView.leftAxis.drawGridLinesEnabled = false
+        barChartView.rightAxis.drawAxisLineEnabled = false
+        barChartView.rightAxis.drawGridLinesEnabled = false
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {

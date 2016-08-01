@@ -76,12 +76,12 @@ class FourthChartViewController: UIViewController {
         // 2 - create a data set with our array
         let set1: LineChartDataSet = LineChartDataSet(yVals: yVals1, label: "First Set")
         set1.axisDependency = .Left // Line will correlate with left axis values
-        set1.setColor(UIColor.redColor().colorWithAlphaComponent(0.5)) // our line's opacity is 50%
-        set1.setCircleColor(UIColor.redColor()) // our circle will be dark red
+        set1.setColor(UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1.0).colorWithAlphaComponent(0.5)) // our line's opacity is 50%
+        set1.setCircleColor(UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1.0)) // our circle will be dark red
         set1.lineWidth = 2.0
         set1.circleRadius = 6.0 // the radius of the node circle
         set1.fillAlpha = 65 / 255.0
-        set1.fillColor = UIColor.redColor()
+        set1.fillColor = UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1.0)
         set1.highlightColor = UIColor.whiteColor()
         set1.drawCircleHoleEnabled = true
         set1.mode = .CubicBezier
@@ -96,12 +96,12 @@ class FourthChartViewController: UIViewController {
         
         let set2: LineChartDataSet = LineChartDataSet(yVals: yVals2, label: "Second Set")
         set2.axisDependency = .Left // Line will correlate with left axis values
-        set2.setColor(UIColor.blueColor().colorWithAlphaComponent(0.5))
-        set2.setCircleColor(UIColor.blueColor())
+        set2.setColor(UIColor(red: 109/255, green: 74/255, blue: 250/255, alpha: 1.0).colorWithAlphaComponent(0.5))
+        set2.setCircleColor(UIColor(red: 109/255, green: 74/255, blue: 250/255, alpha: 1.0))
         set2.lineWidth = 2.0
         set2.circleRadius = 6.0
         set2.fillAlpha = 65 / 255.0
-        set2.fillColor = UIColor.blueColor()
+        set2.fillColor = UIColor(red: 109/255, green: 74/255, blue: 250/255, alpha: 1.0)
         set2.highlightColor = UIColor.whiteColor()
         set2.drawCircleHoleEnabled = true
         set2.mode = .CubicBezier
@@ -114,11 +114,26 @@ class FourthChartViewController: UIViewController {
         
         //4 - pass our months in for our x-axis label value along with our dataSets
         let data: LineChartData = LineChartData(xVals: months, dataSets: dataSets)
-        data.setValueTextColor(UIColor.orangeColor())
+        data.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
         
         //5 - finally set our data
         lineChartView.data = data
         lineChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .Linear)
+        lineChartView.descriptionText = ""
+        
+        lineChartView.xAxis.labelPosition = .Bottom
+        lineChartView.xAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
+        lineChartView.leftAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
+        
+        lineChartView.rightAxis.enabled = false
+        
+        // grid lines
+        lineChartView.xAxis.drawAxisLineEnabled = false
+        lineChartView.xAxis.drawGridLinesEnabled = false
+        lineChartView.leftAxis.drawAxisLineEnabled = false
+        lineChartView.leftAxis.drawGridLinesEnabled = false
+        lineChartView.rightAxis.drawAxisLineEnabled = false
+        lineChartView.rightAxis.drawGridLinesEnabled = false
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {

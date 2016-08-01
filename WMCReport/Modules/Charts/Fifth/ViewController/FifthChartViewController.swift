@@ -79,24 +79,44 @@ class FifthChartViewController: UIViewController {
         
         //
         let lineChartSet = LineChartDataSet(yVals: yVals1, label: "Line Data")
-        lineChartSet.setColor(UIColor.redColor().colorWithAlphaComponent(0.5)) // our line's opacity is 50%
-        lineChartSet.setCircleColor(UIColor.redColor()) // our circle will be dark red
+        lineChartSet.setColor(UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1.0).colorWithAlphaComponent(0.5)) // our line's opacity is 50%
+        lineChartSet.setCircleColor(UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1.0)) // our circle will be dark red
         lineChartSet.lineWidth = 2.0
         lineChartSet.circleRadius = 6.0 // the radius of the node circle
         lineChartSet.fillAlpha = 65 / 255.0
-        lineChartSet.fillColor = UIColor.redColor()
-        lineChartSet.highlightColor = UIColor.whiteColor()
+        lineChartSet.fillColor = UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1.0)
+        lineChartSet.highlightColor = UIColor.blueColor()
         lineChartSet.drawCircleHoleEnabled = true
         
         //
         let barChartSet: BarChartDataSet = BarChartDataSet(yVals: yVals2, label: "Bar Data")
+        barChartSet.colors = [UIColor(red: 109/255, green: 74/255, blue: 250/255, alpha: 1)]
         
         let data: CombinedChartData = CombinedChartData(xVals: xValues)
         data.barData = BarChartData(xVals: xValues, dataSets: [barChartSet])
         data.lineData = LineChartData(xVals: xValues, dataSets: [lineChartSet])
+        data.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
         
         combinedChartView.data = data
         combinedChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .Linear)
+        
+        combinedChartView.descriptionText = ""
+        
+        combinedChartView.xAxis.labelPosition = .Bottom
+        combinedChartView.xAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
+        combinedChartView.leftAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
+        
+        combinedChartView.rightAxis.enabled = false
+        
+        // grid lines
+        combinedChartView.xAxis.drawAxisLineEnabled = false
+        combinedChartView.xAxis.drawGridLinesEnabled = false
+        combinedChartView.leftAxis.drawAxisLineEnabled = false
+        combinedChartView.leftAxis.drawGridLinesEnabled = false
+        combinedChartView.rightAxis.drawAxisLineEnabled = false
+        combinedChartView.rightAxis.drawGridLinesEnabled = false
+        
+        combinedChartView.xAxis.gridColor = UIColor.redColor()
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {

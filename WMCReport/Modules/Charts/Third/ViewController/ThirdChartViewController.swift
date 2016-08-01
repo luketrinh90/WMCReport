@@ -106,20 +106,31 @@ class ThirdChartViewController: UIViewController {
         chartData2.drawValuesEnabled = false
         chartData3.drawValuesEnabled = false
         
-        chartData1.colors =  [UIColor(red: 255/255, green: 112/255, blue: 67/255, alpha: 1)]
-        chartData2.colors =  [UIColor(red: 76/255, green: 175/255, blue: 80/255, alpha: 1)]
-        chartData3.colors =  [UIColor(red: 127/255, green: 0/255, blue: 127/255, alpha: 1)]
+        chartData1.colors = [UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1)]
+        chartData2.colors = [UIColor(red: 109/255, green: 74/255, blue: 250/255, alpha: 1)]
+        chartData3.colors = [UIColor(red: 127/255, green: 0/255, blue: 127/255, alpha: 1)]
         
         let dataSets: [BubbleChartDataSet] = [chartData1,chartData2,chartData3]
         
         let data = BubbleChartData(xVals: dataPoints, dataSets: dataSets)
         
         bubbleChartView.data = data
-        
         bubbleChartView.descriptionText = ""
-        
         bubbleChartView.animate(yAxisDuration: 2.0, easingOption: .EaseOutBack)
         
+        bubbleChartView.xAxis.labelPosition = .Bottom
+        bubbleChartView.xAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
+        bubbleChartView.leftAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
+        
+        bubbleChartView.rightAxis.enabled = false
+        
+        // grid lines
+        bubbleChartView.xAxis.drawAxisLineEnabled = false
+        bubbleChartView.xAxis.drawGridLinesEnabled = false
+        bubbleChartView.leftAxis.drawAxisLineEnabled = false
+        bubbleChartView.leftAxis.drawGridLinesEnabled = false
+        bubbleChartView.rightAxis.drawAxisLineEnabled = false
+        bubbleChartView.rightAxis.drawGridLinesEnabled = false
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {

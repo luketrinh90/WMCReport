@@ -73,8 +73,11 @@ class SixthChartViewController: UIViewController {
         
         let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "Units Sold")
         let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
+        pieChartData.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
+        
         pieChartView.data = pieChartData
         pieChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .Linear)
+        pieChartView.descriptionText = ""
         
         var colors: [UIColor] = []
         
