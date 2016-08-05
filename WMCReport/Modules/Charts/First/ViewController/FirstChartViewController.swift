@@ -8,17 +8,15 @@
 
 import UIKit
 import Charts
-import RealmSwift
 import ActionSheetPicker_3_0
 
 class FirstChartViewController: UIViewController {
     
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var barChartView: BarChartView!
-    let realm = try! Realm()
     
-    var months: [String] = []
-    var unitsSold: [Double] = []
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    var unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,27 +35,7 @@ class FirstChartViewController: UIViewController {
     }
     
     func initFirst() {
-        let fakeMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let fakeUnitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-        
-        if realm.objects(First).count == 0 {
-            for i in 0...11 {
-                let obj = First()
-                obj.id = obj.incrementID()
-                obj.monthNumber = i + 1
-                obj.monthString = fakeMonths[i]
-                obj.value = fakeUnitsSold[i]
-                
-                try! realm.write {
-                    realm.add(obj)
-                }
-            }
-        }
-        
-        for i in 0..<realm.objects(First).count {
-            months.append(realm.objects(First)[i].monthString)
-            unitsSold.append(realm.objects(First)[i].value)
-        }
+
         setChart(months, values: unitsSold)
     }
     

@@ -3,7 +3,6 @@ use_frameworks!
 
 def shared_pods
     pod 'PKHUD', '~> 3.1.0'
-    pod 'RealmSwift'
     pod 'Charts'
     pod 'ActionSheetPicker-3.0'
 end

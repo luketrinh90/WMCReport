@@ -8,18 +8,16 @@
 
 import UIKit
 import Charts
-import RealmSwift
 import ActionSheetPicker_3_0
 
 class FourthChartViewController: UIViewController {
     
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var lineChartView: LineChartView!
-    let realm = try! Realm()
     
-    var months: [String] = []
-    var set1: [Double] = []
-    var set2: [Double] = []
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    var set1 = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+    var set2 = [50.0, 30.0, 10.0, 15.0, 25.0, 20.0, 17.0, 39.0, 32.0, 46.0, 57.0, 1.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,30 +36,7 @@ class FourthChartViewController: UIViewController {
     }
     
     func initFirst() {
-        let fakeMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let fakeSet1 = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-        let fakeSet2 = [50.0, 30.0, 10.0, 15.0, 25.0, 20.0, 17.0, 39.0, 32.0, 46.0, 57.0, 1.0]
-        
-        if realm.objects(Fourth).count == 0 {
-            for i in 0...11 {
-                let obj = Fourth()
-                obj.id = obj.incrementID()
-                obj.monthNumber = i + 1
-                obj.monthString = fakeMonths[i]
-                obj.valueSet1 = fakeSet1[i]
-                obj.valueSet2 = fakeSet2[i]
-                
-                try! realm.write {
-                    realm.add(obj)
-                }
-            }
-        }
-        
-        for i in 0..<realm.objects(Fourth).count {
-            months.append(realm.objects(Fourth)[i].monthString)
-            set1.append(realm.objects(Fourth)[i].valueSet1)
-            set2.append(realm.objects(Fourth)[i].valueSet2)
-        }
+
         
         setChart(months, set1: set1, set2: set2)
     }

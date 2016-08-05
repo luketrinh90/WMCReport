@@ -8,19 +8,17 @@
 
 import UIKit
 import Charts
-import RealmSwift
 import ActionSheetPicker_3_0
 
 class ThirdChartViewController: UIViewController {
     
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var bubbleChartView: BubbleChartView!
-    let realm = try! Realm()
     
-    var months: [String] = []
-    var set1: [Double] = []
-    var set2: [Double] = []
-    var set3: [Double] = []
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    var set1 = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+    var set2 = [50.0, 30.0, 10.0, 15.0, 25.0, 20.0, 17.0, 39.0, 32.0, 46.0, 57.0, 1.0]
+    var set3 = [30.0, 16.0, 29.0, 7.0, 43.0, 3.0, 9.0, 26.0, 28.0, 67.0, 2.0, 0.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,33 +37,7 @@ class ThirdChartViewController: UIViewController {
     }
     
     func initFirst() {
-        let fakeMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let fakeSet1 = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-        let fakeSet2 = [50.0, 30.0, 10.0, 15.0, 25.0, 20.0, 17.0, 39.0, 32.0, 46.0, 57.0, 1.0]
-        let fakeSet3 = [30.0, 16.0, 29.0, 7.0, 43.0, 3.0, 9.0, 26.0, 28.0, 67.0, 2.0, 0.0]
-        
-        if realm.objects(Third).count == 0 {
-            for i in 0...11 {
-                let obj = Third()
-                obj.id = obj.incrementID()
-                obj.monthNumber = i + 1
-                obj.monthString = fakeMonths[i]
-                obj.valueSet1 = fakeSet1[i]
-                obj.valueSet2 = fakeSet2[i]
-                obj.valueSet3 = fakeSet3[i]
-                
-                try! realm.write {
-                    realm.add(obj)
-                }
-            }
-        }
-        
-        for i in 0..<realm.objects(Third).count {
-            months.append(realm.objects(Third)[i].monthString)
-            set1.append(realm.objects(Third)[i].valueSet1)
-            set2.append(realm.objects(Third)[i].valueSet2)
-            set3.append(realm.objects(Third)[i].valueSet3)
-        }
+
         
         setChart(months, set1: set1, set2: set2, set3: set3)
     }
