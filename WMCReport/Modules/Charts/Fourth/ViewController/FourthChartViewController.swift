@@ -10,14 +10,19 @@ import UIKit
 import Charts
 import ActionSheetPicker_3_0
 
-class FourthChartViewController: UIViewController {
+class FourthChartViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var lineChartView: LineChartView!
+    @IBOutlet weak var labelCurrent: UILabel!
+    @IBOutlet weak var labelChange: UILabel!
+    @IBOutlet weak var labelHighest: UILabel!
+    
+    var previous = 0.0
+    var change = 0.0
     
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    var set1 = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-    var set2 = [50.0, 30.0, 10.0, 15.0, 25.0, 20.0, 17.0, 39.0, 32.0, 46.0, 57.0, 1.0]
+    var set1 = [23.0, 25.0, 24.0, 22.0, 21.0, 19.0, 25.0, 24.0, 23.0, 30.0, 20.0, 22.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +41,11 @@ class FourthChartViewController: UIViewController {
     }
     
     func initFirst() {
-
-        
-        setChart(months, set1: set1, set2: set2)
+        lineChartView.delegate = self
+        setChart(months, set1: set1)
     }
     
-    func setChart(months : [String], set1: [Double], set2: [Double]) {
+    func setChart(months : [String], set1: [Double]) {
         // 1 - creating an array of data entries
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
         for i in 0 ..< months.count {
@@ -51,55 +55,35 @@ class FourthChartViewController: UIViewController {
         // 2 - create a data set with our array
         let set1: LineChartDataSet = LineChartDataSet(yVals: yVals1, label: "First Set")
         set1.axisDependency = .Left // Line will correlate with left axis values
-        set1.setColor(UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1.0).colorWithAlphaComponent(0.5)) // our line's opacity is 50%
-        set1.setCircleColor(UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1.0)) // our circle will be dark red
-        set1.lineWidth = 2.0
-        set1.circleRadius = 6.0 // the radius of the node circle
+        set1.setColor(UIColor(red: 167/255, green: 255/255, blue: 71/255, alpha: 1.0).colorWithAlphaComponent(0.5)) // our line's opacity is 50%
+        set1.setCircleColor(UIColor(red: 167/255, green: 255/255, blue: 71/255, alpha: 1.0)) // our circle will be dark red
+        set1.lineWidth = 5.0
+        set1.circleRadius = 0.0 // the radius of the node circle
         set1.fillAlpha = 65 / 255.0
-        set1.fillColor = UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1.0)
+        set1.fillColor = UIColor(red: 65/255, green: 72/255, blue: 83/255, alpha: 1.0)
         set1.highlightColor = UIColor.whiteColor()
-        set1.drawCircleHoleEnabled = true
+        set1.drawCircleHoleEnabled = false
         set1.mode = .CubicBezier
         set1.drawFilledEnabled = true
-        
-        //////////////////////////////////////////////////////////////////////////////////
-        
-        var yVals2 : [ChartDataEntry] = [ChartDataEntry]()
-        for i in 0 ..< months.count {
-            yVals2.append(ChartDataEntry(value: set2[i], xIndex: i))
-        }
-        
-        let set2: LineChartDataSet = LineChartDataSet(yVals: yVals2, label: "Second Set")
-        set2.axisDependency = .Left // Line will correlate with left axis values
-        set2.setColor(UIColor(red: 109/255, green: 74/255, blue: 250/255, alpha: 1.0).colorWithAlphaComponent(0.5))
-        set2.setCircleColor(UIColor(red: 109/255, green: 74/255, blue: 250/255, alpha: 1.0))
-        set2.lineWidth = 2.0
-        set2.circleRadius = 6.0
-        set2.fillAlpha = 65 / 255.0
-        set2.fillColor = UIColor(red: 109/255, green: 74/255, blue: 250/255, alpha: 1.0)
-        set2.highlightColor = UIColor.whiteColor()
-        set2.drawCircleHoleEnabled = true
-        set2.mode = .CubicBezier
-        set2.drawFilledEnabled = true
         
         //3 - create an array to store our LineChartDataSets
         var dataSets : [LineChartDataSet] = [LineChartDataSet]()
         dataSets.append(set1)
-        dataSets.append(set2)
         
         //4 - pass our months in for our x-axis label value along with our dataSets
         let data: LineChartData = LineChartData(xVals: months, dataSets: dataSets)
         data.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
+        data.setDrawValues(false)
         
         //5 - finally set our data
         lineChartView.data = data
-        lineChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .Linear)
+        lineChartView.animate(xAxisDuration: 1, yAxisDuration: 0, easingOption: .Linear)
         lineChartView.descriptionText = ""
         
-        lineChartView.xAxis.labelPosition = .Bottom
-        lineChartView.xAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
-        lineChartView.leftAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
-        
+        //
+        lineChartView.xAxis.enabled = false
+        lineChartView.legend.enabled = false
+        lineChartView.leftAxis.enabled = false
         lineChartView.rightAxis.enabled = false
         
         // grid lines
@@ -109,6 +93,8 @@ class FourthChartViewController: UIViewController {
         lineChartView.leftAxis.drawGridLinesEnabled = false
         lineChartView.rightAxis.drawAxisLineEnabled = false
         lineChartView.rightAxis.drawGridLinesEnabled = false
+        
+        lineChartView.doubleTapToZoomEnabled = false
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {
@@ -120,7 +106,7 @@ class FourthChartViewController: UIViewController {
             print("picker = \(picker)")
             
             self.random()
-            self.setChart(self.months, set1: self.set1, set2: self.set2)
+            self.setChart(self.months, set1: self.set1)
             
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
@@ -128,12 +114,36 @@ class FourthChartViewController: UIViewController {
     
     func random() {
         for i in 0...11 {
-            set1[i] = Double(randRange(0, upper: 100))
-            set2[i] = Double(randRange(0, upper: 100))
+            set1[i] = Double(randRange(0, upper: 99))
         }
     }
     
     func randRange(lower: Int , upper: Int) -> Int {
         return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
+    }
+    
+    func chartValueSelected(chartView: ChartViewBase, entry: ChartDataEntry, dataSetIndex: Int, highlight: ChartHighlight) {
+        labelCurrent.text = String(format: "%.0f", highlight.value)
+        labelHighest.text = String(format: "%.0f", getHighest(set1))
+        
+        if highlight.value > previous {
+            labelChange.textColor = UIColor.greenColor()
+            change = highlight.value - previous
+        } else {
+            labelChange.textColor = UIColor.redColor()
+            change = previous - highlight.value
+        }
+        previous = highlight.value
+        labelChange.text = String(format: "%.0f", change)
+    }
+    
+    func getHighest(set: [Double]) -> Double {
+        var highest = set[0]
+        for i in 1...set.count - 1 {
+            if highest < set[i] {
+                highest = set[i]
+            }
+        }
+        return highest
     }
 }

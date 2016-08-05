@@ -132,8 +132,8 @@ class SecondChartViewController: UIViewController, ChartViewDelegate {
     
     func random() {
         for i in 0...11 {
-            set1[i] = Double(randRange(0, upper: 100))
-            set2[i] = Double(randRange(0, upper: 100))
+            set1[i] = Double(randRange(1, upper: 69))
+            set2[i] = Double(randRange(29, upper: 99))
         }
     }
     

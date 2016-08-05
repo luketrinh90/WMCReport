@@ -10,7 +10,7 @@ import UIKit
 import Charts
 import ActionSheetPicker_3_0
 
-class ThirdChartViewController: UIViewController {
+class ThirdChartViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var bubbleChartView: BubbleChartView!
@@ -37,54 +37,37 @@ class ThirdChartViewController: UIViewController {
     }
     
     func initFirst() {
-
-        
+        bubbleChartView.delegate = self
         setChart(months, set1: set1, set2: set2, set3: set3)
     }
     
     func setChart(dataPoints: [String], set1: [Double], set2: [Double], set3: [Double]) {
-        
-        
         var dataEntries1: [BubbleChartDataEntry] = []
         var dataEntries2: [BubbleChartDataEntry] = []
-        var dataEntries3: [BubbleChartDataEntry] = []
-        
         
         for i in 0..<dataPoints.count {
-            
             let dataEntry = BubbleChartDataEntry(xIndex: i, value: set1[i], size: CGFloat(set1[i]))
             dataEntries1.append(dataEntry)
         }
         
-        
         for i in 0..<dataPoints.count {
-            
             let dataEntry = BubbleChartDataEntry(xIndex: i, value: set2[i], size: CGFloat(set2[i]))
             dataEntries2.append(dataEntry)
         }
         
-        
-        for i in 0..<dataPoints.count {
-            
-            let dataEntry = BubbleChartDataEntry(xIndex: i, value: set3[i], size: CGFloat(set3[i]))
-            dataEntries3.append(dataEntry)
-        }
-        
         let chartData1 = BubbleChartDataSet(yVals: dataEntries1,label: "amount" )
         let chartData2 = BubbleChartDataSet(yVals: dataEntries2,label: "revenue")
-        let chartData3 = BubbleChartDataSet(yVals: dataEntries3,label: "something")
         
         chartData1.drawValuesEnabled = false
         chartData2.drawValuesEnabled = false
-        chartData3.drawValuesEnabled = false
         
         chartData1.colors = [UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1)]
         chartData2.colors = [UIColor(red: 109/255, green: 74/255, blue: 250/255, alpha: 1)]
-        chartData3.colors = [UIColor(red: 127/255, green: 0/255, blue: 127/255, alpha: 1)]
         
-        let dataSets: [BubbleChartDataSet] = [chartData1,chartData2,chartData3]
+        let dataSets: [BubbleChartDataSet] = [chartData1,chartData2]
         
         let data = BubbleChartData(xVals: dataPoints, dataSets: dataSets)
+        data.setDrawValues(false)
         
         bubbleChartView.data = data
         bubbleChartView.descriptionText = ""
@@ -94,6 +77,10 @@ class ThirdChartViewController: UIViewController {
         bubbleChartView.xAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
         bubbleChartView.leftAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
         
+        //
+        bubbleChartView.xAxis.enabled = false
+        bubbleChartView.legend.textColor = UIColor.whiteColor()
+        bubbleChartView.leftAxis.enabled = false
         bubbleChartView.rightAxis.enabled = false
         
         // grid lines
@@ -103,6 +90,8 @@ class ThirdChartViewController: UIViewController {
         bubbleChartView.leftAxis.drawGridLinesEnabled = false
         bubbleChartView.rightAxis.drawAxisLineEnabled = false
         bubbleChartView.rightAxis.drawGridLinesEnabled = false
+        
+        bubbleChartView.doubleTapToZoomEnabled = false
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {
