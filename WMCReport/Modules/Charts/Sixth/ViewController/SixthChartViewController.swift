@@ -15,8 +15,8 @@ class SixthChartViewController: UIViewController {
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var pieChartView: PieChartView!
     
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    var unitsSold = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+    let months = ["Male", "Female"]
+    var unitsSold = [9563.0, 4687.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +35,6 @@ class SixthChartViewController: UIViewController {
     }
     
     func initFirst() {
-
-        
         setChart(months, values: unitsSold)
     }
     
@@ -49,26 +47,18 @@ class SixthChartViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "Units Sold")
+        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "Population")
+        
+        pieChartDataSet.colors = [UIColor(red: 244/255, green: 140/255, blue: 96/255, alpha: 1.0).colorWithAlphaComponent(1.0), UIColor(red: 206/255, green: 74/255, blue: 99/255, alpha: 1.0).colorWithAlphaComponent(1.0)]
+        pieChartDataSet.valueTextColor = UIColor(red: 235/255, green: 216/255, blue: 217/255, alpha: 1.0)
+        
         let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
-        pieChartData.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
+        //pieChartData.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
         
         pieChartView.data = pieChartData
         pieChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .Linear)
         pieChartView.descriptionText = ""
-        
-        var colors: [UIColor] = []
-        
-        for i in 0..<dataPoints.count {
-            let red = Double(arc4random_uniform(256))
-            let green = Double(arc4random_uniform(256))
-            let blue = Double(arc4random_uniform(256))
-            
-            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-            colors.append(color)
-        }
-        
-        pieChartDataSet.colors = colors
+        pieChartView.legend.enabled = false
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {
@@ -87,8 +77,8 @@ class SixthChartViewController: UIViewController {
     }
     
     func random() {
-        for i in 0...11 {
-            unitsSold[i] = Double(randRange(0, upper: 100))
+        for i in 0...1 {
+            unitsSold[i] = Double(randRange(999, upper: 9999))
         }
     }
     

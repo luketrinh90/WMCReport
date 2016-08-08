@@ -15,8 +15,17 @@ class FirstChartViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var barChartView: BarChartView!
     
-    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"]
-    var unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0]
+    @IBOutlet weak var labelCurrent: UILabel!
+    @IBOutlet weak var labelChange: UILabel!
+    @IBOutlet weak var labelMonth: UILabel!
+    @IBOutlet weak var labelLowest: UILabel!
+    @IBOutlet weak var labelHighest: UILabel!
+    
+    var previous = 0.0
+    var change = 0.0
+    
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    var unitsSold = [23.0, 25.0, 24.0, 22.0, 21.0, 19.0, 25.0, 24.0, 23.0, 30.0, 20.0, 22.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +61,7 @@ class FirstChartViewController: UIViewController, ChartViewDelegate {
         let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Sold")
         chartDataSet.setColor(UIColor(red: 180/255, green: 120/255, blue: 122/255, alpha: 1.0).colorWithAlphaComponent(0.3)) // our line's opacity is 50%
         chartDataSet.valueTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
+        chartDataSet.highlightColor = UIColor(red: 236/255, green: 121/255, blue: 91/255, alpha: 1.0)
         
         let data = BarChartData(xVals: dataPoints, dataSet: chartDataSet)
         data.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
@@ -95,7 +105,7 @@ class FirstChartViewController: UIViewController, ChartViewDelegate {
     
     func random() {
         for i in 0...months.count - 1 {
-            unitsSold[i] = Double(randRange(0, upper: 99))
+            unitsSold[i] = Double(randRange(5, upper: 99))
         }
     }
     
@@ -104,6 +114,59 @@ class FirstChartViewController: UIViewController, ChartViewDelegate {
     }
     
     func chartValueSelected(chartView: ChartViewBase, entry: ChartDataEntry, dataSetIndex: Int, highlight: ChartHighlight) {
-        print("HAHHA \(entry)")
+        
+        labelCurrent.text = String(format: "%.0f", highlight.value)
+        labelMonth.text = String(format: "%.0f", unitsSold[getMonth() - 1])
+        
+        labelLowest.text = String(format: "%.0f", getLowest(unitsSold))
+        labelHighest.text = String(format: "%.0f", getHighest(unitsSold))
+        
+        if highlight.value > previous {
+            labelChange.textColor = UIColor.greenColor()
+            change = highlight.value - previous
+            labelChange.text = String(format: "+%.0f", change)
+        } else {
+            labelChange.textColor = UIColor.redColor()
+            change = previous - highlight.value
+            labelChange.text = String(format: "-%.0f", change)
+        }
+        previous = highlight.value
+        
+    }
+    
+    func getMonth() -> Int {
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Day , .Month , .Year], fromDate: date)
+        
+        let year =  components.year
+        let month = components.month
+        let day = components.day
+        
+        print(year)
+        print(month)
+        print(day)
+        
+        return month
+    }
+    
+    func getHighest(set: [Double]) -> Double {
+        var highest = set[0]
+        for i in 1...set.count - 1 {
+            if highest < set[i] {
+                highest = set[i]
+            }
+        }
+        return highest
+    }
+    
+    func getLowest(set: [Double]) -> Double {
+        var lowest = set[0]
+        for i in 1...set.count - 1 {
+            if lowest > set[i] {
+                lowest = set[i]
+            }
+        }
+        return lowest
     }
 }
