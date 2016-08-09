@@ -15,10 +15,13 @@ class ThirdChartViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var bubbleChartView: BubbleChartView!
     
+    @IBOutlet weak var labelCurrent: UILabel!
+    @IBOutlet weak var labelMonth: UILabel!
+    @IBOutlet weak var labelAll: UILabel!
+    
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     var set1 = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
     var set2 = [50.0, 30.0, 10.0, 15.0, 25.0, 20.0, 17.0, 39.0, 32.0, 46.0, 57.0, 1.0]
-    var set3 = [30.0, 16.0, 29.0, 7.0, 43.0, 3.0, 9.0, 26.0, 28.0, 67.0, 2.0, 0.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +41,10 @@ class ThirdChartViewController: UIViewController, ChartViewDelegate {
     
     func initFirst() {
         bubbleChartView.delegate = self
-        setChart(months, set1: set1, set2: set2, set3: set3)
+        setChart(months, set1: set1, set2: set2)
     }
     
-    func setChart(dataPoints: [String], set1: [Double], set2: [Double], set3: [Double]) {
+    func setChart(dataPoints: [String], set1: [Double], set2: [Double]) {
         var dataEntries1: [BubbleChartDataEntry] = []
         var dataEntries2: [BubbleChartDataEntry] = []
         
@@ -61,8 +64,8 @@ class ThirdChartViewController: UIViewController, ChartViewDelegate {
         chartData1.drawValuesEnabled = false
         chartData2.drawValuesEnabled = false
         
-        chartData1.colors = [UIColor(red: 255/255, green: 54/255, blue: 75/255, alpha: 1)]
-        chartData2.colors = [UIColor(red: 109/255, green: 74/255, blue: 250/255, alpha: 1)]
+        chartData1.colors = [UIColor(red: 220/255, green: 202/255, blue: 44/255, alpha: 1)]
+        chartData2.colors = [UIColor(red: 99/255, green: 207/255, blue: 228/255, alpha: 1)]
         
         let dataSets: [BubbleChartDataSet] = [chartData1,chartData2]
         
@@ -71,7 +74,7 @@ class ThirdChartViewController: UIViewController, ChartViewDelegate {
         
         bubbleChartView.data = data
         bubbleChartView.descriptionText = ""
-        bubbleChartView.animate(yAxisDuration: 2.0, easingOption: .EaseOutBack)
+        bubbleChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .EaseOutBack)
         
         bubbleChartView.xAxis.labelPosition = .Bottom
         bubbleChartView.xAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
@@ -79,17 +82,9 @@ class ThirdChartViewController: UIViewController, ChartViewDelegate {
         
         //
         bubbleChartView.xAxis.enabled = false
-        bubbleChartView.legend.textColor = UIColor.whiteColor()
+        bubbleChartView.legend.enabled = false
         bubbleChartView.leftAxis.enabled = false
         bubbleChartView.rightAxis.enabled = false
-        
-        // grid lines
-        bubbleChartView.xAxis.drawAxisLineEnabled = false
-        bubbleChartView.xAxis.drawGridLinesEnabled = false
-        bubbleChartView.leftAxis.drawAxisLineEnabled = false
-        bubbleChartView.leftAxis.drawGridLinesEnabled = false
-        bubbleChartView.rightAxis.drawAxisLineEnabled = false
-        bubbleChartView.rightAxis.drawGridLinesEnabled = false
         
         bubbleChartView.doubleTapToZoomEnabled = false
     }
@@ -103,7 +98,7 @@ class ThirdChartViewController: UIViewController, ChartViewDelegate {
             print("picker = \(picker)")
             
             self.random()
-            self.setChart(self.months, set1: self.set1, set2: self.set2, set3: self.set3)
+            self.setChart(self.months, set1: self.set1, set2: self.set2)
             
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
@@ -111,13 +106,50 @@ class ThirdChartViewController: UIViewController, ChartViewDelegate {
     
     func random() {
         for i in 0...11 {
-            set1[i] = Double(randRange(0, upper: 100))
-            set2[i] = Double(randRange(0, upper: 100))
-            set3[i] = Double(randRange(0, upper: 100))
+            set1[i] = Double(randRange(5, upper: 40))
+            set2[i] = Double(randRange(5, upper: 60))
         }
     }
     
     func randRange(lower: Int , upper: Int) -> Int {
         return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
+    }
+    
+    func chartValueSelected(chartView: ChartViewBase, entry: ChartDataEntry, dataSetIndex: Int, highlight: ChartHighlight) {
+        labelCurrent.text = String(format: "%.0f", highlight.value)
+        
+        if dataSetIndex == 0 {
+            labelMonth.text = String(format: "%.0f", set1[getMonth() - 1])
+            labelAll.text = String(format: "%.0f", getHighest(set1))
+        } else {
+            labelMonth.text = String(format: "%.0f", set2[getMonth() - 1])
+            labelAll.text = String(format: "%.0f", getHighest(set2))
+        }
+    }
+    
+    func getMonth() -> Int {
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Day , .Month , .Year], fromDate: date)
+        
+        let year =  components.year
+        let month = components.month
+        let day = components.day
+        
+        print(year)
+        print(month)
+        print(day)
+        
+        return month
+    }
+    
+    func getHighest(set: [Double]) -> Double {
+        var highest = set[0]
+        for i in 1...set.count - 1 {
+            if highest < set[i] {
+                highest = set[i]
+            }
+        }
+        return highest
     }
 }

@@ -77,7 +77,7 @@ class FourthChartViewController: UIViewController, ChartViewDelegate {
         
         //5 - finally set our data
         lineChartView.data = data
-        lineChartView.animate(xAxisDuration: 1, yAxisDuration: 0, easingOption: .Linear)
+        lineChartView.animate(xAxisDuration: 1, easingOption: .Linear)
         lineChartView.descriptionText = ""
         
         //

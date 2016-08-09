@@ -68,7 +68,7 @@ class FirstChartViewController: UIViewController, ChartViewDelegate {
         data.setDrawValues(false)
         
         barChartView.data = data
-        barChartView.animate(yAxisDuration: 2, easingOption: .EaseOutBounce)
+        barChartView.animate(yAxisDuration: 2, easingOption: .EaseOutBack)
         barChartView.descriptionText = ""
         
         //

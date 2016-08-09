@@ -53,11 +53,10 @@ class SixthChartViewController: UIViewController {
         pieChartDataSet.valueTextColor = UIColor(red: 235/255, green: 216/255, blue: 217/255, alpha: 1.0)
         
         let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
-        //pieChartData.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
-        
         pieChartView.data = pieChartData
         pieChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .Linear)
         pieChartView.descriptionText = ""
+        pieChartView.holeColor = UIColor(red: 66/255, green: 34/255, blue: 44/255, alpha: 1.0)
         pieChartView.legend.enabled = false
     }
     
