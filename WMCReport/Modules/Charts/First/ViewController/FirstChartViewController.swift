@@ -12,6 +12,7 @@ import ActionSheetPicker_3_0
 
 class FirstChartViewController: UIViewController, ChartViewDelegate {
     
+    @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var barChartView: BarChartView!
     
@@ -86,6 +87,8 @@ class FirstChartViewController: UIViewController, ChartViewDelegate {
         barChartView.rightAxis.drawGridLinesEnabled = false
         
         barChartView.doubleTapToZoomEnabled = false
+        
+        infoView.backgroundColor = UIColor(red: 236/255, green: 121/255, blue: 91/255, alpha: 1.0).colorWithAlphaComponent(0.7)
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {
