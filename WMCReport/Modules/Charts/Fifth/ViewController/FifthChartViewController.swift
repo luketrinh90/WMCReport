@@ -10,10 +10,13 @@ import UIKit
 import Charts
 import ActionSheetPicker_3_0
 
-class FifthChartViewController: UIViewController {
+class FifthChartViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var combinedChartView: CombinedChartView!
+    @IBOutlet weak var labelCurrent: UILabel!
+    @IBOutlet weak var labelMonth: UILabel!
+    @IBOutlet weak var labelHighest: UILabel!
     
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     var set1 = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
@@ -36,8 +39,7 @@ class FifthChartViewController: UIViewController {
     }
     
     func initFirst() {
-
-        
+        combinedChartView.delegate = self
         setChart(months, yValuesLineChart: set1, yValuesBarChart: set2)
     }
     
@@ -70,28 +72,19 @@ class FifthChartViewController: UIViewController {
         let data: CombinedChartData = CombinedChartData(xVals: xValues)
         data.barData = BarChartData(xVals: xValues, dataSets: [barChartSet])
         data.lineData = LineChartData(xVals: xValues, dataSets: [lineChartSet])
-        data.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
+        data.setDrawValues(false)
         
         combinedChartView.data = data
         combinedChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .Linear)
-        
         combinedChartView.descriptionText = ""
         
-        combinedChartView.xAxis.labelPosition = .Bottom
-        combinedChartView.xAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
-        combinedChartView.leftAxis.labelTextColor = UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0)
-        
+        //
+        combinedChartView.xAxis.enabled = false
+        combinedChartView.legend.enabled = false
+        combinedChartView.leftAxis.enabled = false
         combinedChartView.rightAxis.enabled = false
         
-        // grid lines
-        combinedChartView.xAxis.drawAxisLineEnabled = false
-        combinedChartView.xAxis.drawGridLinesEnabled = false
-        combinedChartView.leftAxis.drawAxisLineEnabled = false
-        combinedChartView.leftAxis.drawGridLinesEnabled = false
-        combinedChartView.rightAxis.drawAxisLineEnabled = false
-        combinedChartView.rightAxis.drawGridLinesEnabled = false
-        
-        combinedChartView.xAxis.gridColor = UIColor.redColor()
+        combinedChartView.doubleTapToZoomEnabled = false
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {
@@ -111,12 +104,44 @@ class FifthChartViewController: UIViewController {
     
     func random() {
         for i in 0...11 {
-            set1[i] = Double(randRange(0, upper: 100))
-            set2[i] = Double(randRange(0, upper: 100))
+            set1[i] = Double(randRange(30, upper: 70))
+            set2[i] = Double(randRange(10, upper: 90))
         }
     }
     
     func randRange(lower: Int , upper: Int) -> Int {
         return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
+    }
+    
+    func chartValueSelected(chartView: ChartViewBase, entry: ChartDataEntry, dataSetIndex: Int, highlight: ChartHighlight) {
+        labelCurrent.text = String(format: "%.0f", highlight.value)
+        labelMonth.text = String(format: "%.0f | %.0f", set1[getMonth() - 1], set2[getMonth() - 1])
+        labelHighest.text = String(format: "%.0f | %.0f", getHighest(set1), getHighest(set2))
+    }
+    
+    func getMonth() -> Int {
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Day , .Month , .Year], fromDate: date)
+        
+        let year =  components.year
+        let month = components.month
+        let day = components.day
+        
+        print(year)
+        print(month)
+        print(day)
+        
+        return month
+    }
+    
+    func getHighest(set: [Double]) -> Double {
+        var highest = set[0]
+        for i in 1...set.count - 1 {
+            if highest < set[i] {
+                highest = set[i]
+            }
+        }
+        return highest
     }
 }
