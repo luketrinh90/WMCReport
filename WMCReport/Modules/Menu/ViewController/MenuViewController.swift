@@ -78,6 +78,14 @@ class MenuViewController: UIViewController {
             let vc = storyboard.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.SixthChartViewController)
             activeViewController = vc
             break
+        case NotificationConstants.ViewController.SeventhChartViewController:
+            let vc = storyboard.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.SeventhChartViewController)
+            activeViewController = vc
+            break
+        case NotificationConstants.ViewController.EighthChartViewController:
+            let vc = storyboard.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.EighthChartViewController)
+            activeViewController = vc
+            break
         default:
             break
         }

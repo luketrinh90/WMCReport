@@ -10,6 +10,8 @@
 		1C1E407CB01DF230B555B95D /* Pods_WMCReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3382FB1B4B7C337168D49FB /* Pods_WMCReportTests.framework */; };
 		494D6BC74D05B71541E2D690 /* Pods_WMCReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC69BC1C0FD433CAD25BC84 /* Pods_WMCReport.framework */; };
 		6F56FAABF618C4D409D4DE52 /* Pods_WMCReportUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3BCF94AEE5D26B221284C5 /* Pods_WMCReportUITests.framework */; };
+		A40732CB1D5C8BE500630172 /* SeventhChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40732CA1D5C8BE500630172 /* SeventhChartViewController.swift */; };
+		A40732CD1D5C8BF800630172 /* EighthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40732CC1D5C8BF800630172 /* EighthChartViewController.swift */; };
 		A41008901D389BCD00B57D4E /* FifthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410088F1D389BCD00B57D4E /* FifthChartViewController.swift */; };
 		A4169C061D3F21030066F8A9 /* SixthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4169C051D3F21030066F8A9 /* SixthChartViewController.swift */; };
 		A4597B4D1D35E32300ABEFAA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */; };
@@ -58,6 +60,8 @@
 		2FC69BC1C0FD433CAD25BC84 /* Pods_WMCReport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		530E6B0574A420086D52174C /* Pods-WMCReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReport/Pods-WMCReport.debug.xcconfig"; sourceTree = "<group>"; };
 		6BFC3DC7F312F4352108E7BC /* Pods-WMCReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReportTests/Pods-WMCReportTests.release.xcconfig"; sourceTree = "<group>"; };
+		A40732CA1D5C8BE500630172 /* SeventhChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeventhChartViewController.swift; sourceTree = "<group>"; };
+		A40732CC1D5C8BF800630172 /* EighthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EighthChartViewController.swift; sourceTree = "<group>"; };
 		A410088F1D389BCD00B57D4E /* FifthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthChartViewController.swift; sourceTree = "<group>"; };
 		A4169C051D3F21030066F8A9 /* SixthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixthChartViewController.swift; sourceTree = "<group>"; };
 		A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -138,9 +142,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A40732C41D5C8B9800630172 /* Eighth */ = {
+			isa = PBXGroup;
+			children = (
+				A40732C61D5C8BAF00630172 /* ViewController */,
+			);
+			path = Eighth;
+			sourceTree = "<group>";
+		};
+		A40732C51D5C8B9800630172 /* Seventh */ = {
+			isa = PBXGroup;
+			children = (
+				A40732C71D5C8BB400630172 /* ViewController */,
+			);
+			path = Seventh;
+			sourceTree = "<group>";
+		};
+		A40732C61D5C8BAF00630172 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A40732CC1D5C8BF800630172 /* EighthChartViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A40732C71D5C8BB400630172 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A40732CA1D5C8BE500630172 /* SeventhChartViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		A4597B5B1D3620AF00ABEFAA /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				A40732C41D5C8B9800630172 /* Eighth */,
+				A40732C51D5C8B9800630172 /* Seventh */,
 				A4597B5C1D3620AF00ABEFAA /* Fifth */,
 				A4597B5D1D3620AF00ABEFAA /* First */,
 				A4597B5E1D3620AF00ABEFAA /* Fourth */,
@@ -712,6 +750,8 @@
 			files = (
 				A4597B551D35ED3500ABEFAA /* MenuCustomViewController.swift in Sources */,
 				A4597B591D35ED5700ABEFAA /* LoginViewModel.swift in Sources */,
+				A40732CD1D5C8BF800630172 /* EighthChartViewController.swift in Sources */,
+				A40732CB1D5C8BE500630172 /* SeventhChartViewController.swift in Sources */,
 				A4A55F641D34ED4F002CE412 /* AppDelegate.swift in Sources */,
 				A4597B511D35EC5B00ABEFAA /* HomeViewModel.swift in Sources */,
 				A4597B641D3620D500ABEFAA /* FirstChartViewController.swift in Sources */,
