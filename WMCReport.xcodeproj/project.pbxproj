@@ -34,6 +34,7 @@
 		A4A55FF41D34F9FB002CE412 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A55FBF1D34F9FB002CE412 /* SWRevealViewController.m */; };
 		A4C122241D54653400A6966C /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4C122231D54653400A6966C /* Gotham-Light.otf */; };
 		A4C4B1731D5D6F0700127DC9 /* SeventhChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C4B1721D5D6F0700127DC9 /* SeventhChartTableViewCell.swift */; };
+		A4C4B1751D5DC61300127DC9 /* EighthChartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C4B1741D5DC61300127DC9 /* EighthChartCollectionViewCell.swift */; };
 		A4E9AE141D37390F0034BD7C /* SecondChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */; };
 		A4E9AE1E1D3777080034BD7C /* ThirdChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */; };
 		A4E9AE201D378EA60034BD7C /* FourthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */; };
@@ -93,6 +94,7 @@
 		A4A55FBF1D34F9FB002CE412 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A4C122231D54653400A6966C /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
 		A4C4B1721D5D6F0700127DC9 /* SeventhChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeventhChartTableViewCell.swift; sourceTree = "<group>"; };
+		A4C4B1741D5DC61300127DC9 /* EighthChartCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EighthChartCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondChartViewController.swift; sourceTree = "<group>"; };
 		A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdChartViewController.swift; sourceTree = "<group>"; };
 		A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthChartViewController.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 		A4C4B1711D5D6EA200127DC9 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				A4C4B1741D5DC61300127DC9 /* EighthChartCollectionViewCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -771,6 +774,7 @@
 				A4597B591D35ED5700ABEFAA /* LoginViewModel.swift in Sources */,
 				A40732CD1D5C8BF800630172 /* EighthChartViewController.swift in Sources */,
 				A40732CB1D5C8BE500630172 /* SeventhChartViewController.swift in Sources */,
+				A4C4B1751D5DC61300127DC9 /* EighthChartCollectionViewCell.swift in Sources */,
 				A4A55F641D34ED4F002CE412 /* AppDelegate.swift in Sources */,
 				A4597B511D35EC5B00ABEFAA /* HomeViewModel.swift in Sources */,
 				A4597B641D3620D500ABEFAA /* FirstChartViewController.swift in Sources */,

@@ -21,6 +21,8 @@
             <string>Gotham-Light</string>
             <string>Gotham-Light</string>
             <string>Gotham-Light</string>
+            <string>Gotham-Light</string>
+            <string>Gotham-Light</string>
         </mutableArray>
         <mutableArray key="MYRIADPRO-LIGHT_0.OTF">
             <string>MyriadPro-Light</string>
@@ -659,32 +661,32 @@
                                     <constraint firstItem="CXE-W5-baD" firstAttribute="top" secondItem="bwP-Ts-wAm" secondAttribute="top" constant="15" id="euM-Zy-Fld"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qMr-Gz-N5D">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qMr-Gz-N5D">
                                 <rect key="frame" x="0.0" y="65" width="600" height="535"/>
                                 <color key="backgroundColor" red="0.15686274510000001" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="seventhChartTableViewCell" id="BDi-ap-IqZ" customClass="SeventhChartTableViewCell" customModule="WMCReport" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BDi-ap-IqZ" id="tkB-M4-0kb">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="52,573" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91T-k4-viw">
-                                                    <rect key="frame" x="245" y="27" width="111" height="36"/>
+                                                    <rect key="frame" x="245" y="25" width="111" height="36"/>
                                                     <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="35"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY'S REVENUE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W45-Qe-iut">
-                                                    <rect key="frame" x="236" y="63" width="128" height="13"/>
+                                                    <rect key="frame" x="236" y="61" width="128" height="13"/>
                                                     <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="91T-k4-viw" firstAttribute="centerY" secondItem="tkB-M4-0kb" secondAttribute="centerY" constant="-5" id="8E5-8r-Lvj"/>
+                                                <constraint firstItem="91T-k4-viw" firstAttribute="centerY" secondItem="tkB-M4-0kb" secondAttribute="centerY" constant="-7" id="8E5-8r-Lvj"/>
                                                 <constraint firstItem="91T-k4-viw" firstAttribute="centerX" secondItem="tkB-M4-0kb" secondAttribute="centerX" id="CR8-do-3Ja"/>
                                                 <constraint firstItem="W45-Qe-iut" firstAttribute="centerX" secondItem="tkB-M4-0kb" secondAttribute="centerX" id="azc-1w-pTl"/>
                                                 <constraint firstItem="W45-Qe-iut" firstAttribute="top" secondItem="91T-k4-viw" secondAttribute="bottom" id="dOj-bj-mB0"/>
@@ -753,7 +755,7 @@
                                         <state key="normal" image="option"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.25882352939999997" green="0.1333333333" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.15686274509803921" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="cG6-SB-y26" firstAttribute="leading" secondItem="rcB-Ox-eD7" secondAttribute="leading" id="2ts-X0-vmL"/>
                                     <constraint firstAttribute="bottom" secondItem="cG6-SB-y26" secondAttribute="bottom" id="7FI-Li-jo1"/>
@@ -764,12 +766,70 @@
                                     <constraint firstAttribute="height" constant="65" id="wc8-RX-pNf"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KVH-i3-ZDd">
+                                <rect key="frame" x="0.0" y="65" width="600" height="535"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="PKI-ZG-lT9">
+                                    <size key="itemSize" width="160" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="eighthChartCollectionViewCell" id="LMn-2g-eKU" customClass="EighthChartCollectionViewCell" customModule="WMCReport" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17,325,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJr-FN-j0p">
+                                                    <rect key="frame" x="5" y="70" width="150" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY'S REVENUE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZw-CU-qKc">
+                                                    <rect key="frame" x="5" y="140" width="150" height="10"/>
+                                                    <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="qJr-FN-j0p" firstAttribute="leading" secondItem="LMn-2g-eKU" secondAttribute="leading" constant="5" id="Cha-mv-Pg3"/>
+                                            <constraint firstAttribute="trailing" secondItem="lZw-CU-qKc" secondAttribute="trailing" constant="5" id="DYQ-oN-qdu"/>
+                                            <constraint firstItem="qJr-FN-j0p" firstAttribute="centerY" secondItem="LMn-2g-eKU" secondAttribute="centerY" id="aPJ-om-B66"/>
+                                            <constraint firstAttribute="bottom" secondItem="lZw-CU-qKc" secondAttribute="bottom" constant="10" id="d7M-nF-es6"/>
+                                            <constraint firstItem="qJr-FN-j0p" firstAttribute="centerX" secondItem="LMn-2g-eKU" secondAttribute="centerX" id="kEx-nR-hJ2"/>
+                                            <constraint firstItem="lZw-CU-qKc" firstAttribute="centerX" secondItem="LMn-2g-eKU" secondAttribute="centerX" id="lul-HJ-MGX"/>
+                                            <constraint firstItem="lZw-CU-qKc" firstAttribute="leading" secondItem="LMn-2g-eKU" secondAttribute="leading" constant="5" id="qtM-lM-kfV"/>
+                                            <constraint firstAttribute="trailing" secondItem="qJr-FN-j0p" secondAttribute="trailing" constant="5" id="vuo-gD-sDF"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="labelDescription" destination="lZw-CU-qKc" id="yFj-hK-jh0"/>
+                                            <outlet property="labelNumber" destination="qJr-FN-j0p" id="DXb-zV-Itp"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wRi-O2-HCF" id="5Us-9q-YVy"/>
+                                    <outlet property="delegate" destination="wRi-O2-HCF" id="roV-Y4-RSm"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rcB-Ox-eD7" firstAttribute="top" secondItem="RVN-Bh-xdC" secondAttribute="top" id="LzO-mf-f75"/>
+                            <constraint firstItem="KVH-i3-ZDd" firstAttribute="top" secondItem="rcB-Ox-eD7" secondAttribute="bottom" id="Ovo-Pz-CqJ"/>
+                            <constraint firstItem="KVH-i3-ZDd" firstAttribute="leading" secondItem="RVN-Bh-xdC" secondAttribute="leading" id="flF-Gn-bvw"/>
                             <constraint firstItem="rcB-Ox-eD7" firstAttribute="leading" secondItem="RVN-Bh-xdC" secondAttribute="leading" id="qIF-dI-yci"/>
                             <constraint firstAttribute="trailing" secondItem="rcB-Ox-eD7" secondAttribute="trailing" id="qXw-op-Gja"/>
+                            <constraint firstItem="XVp-nI-Pxy" firstAttribute="top" secondItem="KVH-i3-ZDd" secondAttribute="bottom" id="wat-2p-egv"/>
+                            <constraint firstAttribute="trailing" secondItem="KVH-i3-ZDd" secondAttribute="trailing" id="xsZ-wq-yoc"/>
                         </constraints>
                     </view>
                     <connections>
