@@ -19,6 +19,8 @@
             <string>Gotham-Light</string>
             <string>Gotham-Light</string>
             <string>Gotham-Light</string>
+            <string>Gotham-Light</string>
+            <string>Gotham-Light</string>
         </mutableArray>
         <mutableArray key="MYRIADPRO-LIGHT_0.OTF">
             <string>MyriadPro-Light</string>
@@ -646,7 +648,7 @@
                                         <state key="normal" image="option"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.25882352939999997" green="0.1333333333" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.15686274509803921" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="CXE-W5-baD" firstAttribute="leading" secondItem="bwP-Ts-wAm" secondAttribute="leading" id="9Ft-Xq-c2l"/>
                                     <constraint firstAttribute="bottom" secondItem="bXS-Qh-Z3t" secondAttribute="bottom" id="FhV-KF-LA6"/>
@@ -657,19 +659,48 @@
                                     <constraint firstItem="CXE-W5-baD" firstAttribute="top" secondItem="bwP-Ts-wAm" secondAttribute="top" constant="15" id="euM-Zy-Fld"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qMr-Gz-N5D">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qMr-Gz-N5D">
                                 <rect key="frame" x="0.0" y="65" width="600" height="535"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BDi-ap-IqZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="seventhChartTableViewCell" id="BDi-ap-IqZ" customClass="SeventhChartTableViewCell" customModule="WMCReport" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BDi-ap-IqZ" id="tkB-M4-0kb">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="52,573" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91T-k4-viw">
+                                                    <rect key="frame" x="245" y="27" width="111" height="36"/>
+                                                    <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="35"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY'S REVENUE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W45-Qe-iut">
+                                                    <rect key="frame" x="236" y="63" width="128" height="13"/>
+                                                    <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="91T-k4-viw" firstAttribute="centerY" secondItem="tkB-M4-0kb" secondAttribute="centerY" constant="-5" id="8E5-8r-Lvj"/>
+                                                <constraint firstItem="91T-k4-viw" firstAttribute="centerX" secondItem="tkB-M4-0kb" secondAttribute="centerX" id="CR8-do-3Ja"/>
+                                                <constraint firstItem="W45-Qe-iut" firstAttribute="centerX" secondItem="tkB-M4-0kb" secondAttribute="centerX" id="azc-1w-pTl"/>
+                                                <constraint firstItem="W45-Qe-iut" firstAttribute="top" secondItem="91T-k4-viw" secondAttribute="bottom" id="dOj-bj-mB0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="labelDescription" destination="W45-Qe-iut" id="NP0-Fj-sS7"/>
+                                            <outlet property="labelNumber" destination="91T-k4-viw" id="Ecv-Ef-vUj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Yc-aU-Mtf" id="BW4-aB-RPs"/>
+                                    <outlet property="delegate" destination="7Yc-aU-Mtf" id="lh7-bE-uAu"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1057,8 +1088,8 @@
                                         </constraints>
                                         <state key="normal" image="menu"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fifth Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3p-Jj-e9O">
-                                        <rect key="frame" x="258" y="20" width="85" height="45"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fifth Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3p-Jj-e9O">
+                                        <rect key="frame" x="260" y="20" width="80" height="45"/>
                                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>

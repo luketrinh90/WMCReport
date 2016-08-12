@@ -33,6 +33,7 @@
 		A4A55FE71D34F9FB002CE412 /* MYRIADPRO-REGULAR.OTF in Resources */ = {isa = PBXBuildFile; fileRef = A4A55FB01D34F9FB002CE412 /* MYRIADPRO-REGULAR.OTF */; };
 		A4A55FF41D34F9FB002CE412 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A55FBF1D34F9FB002CE412 /* SWRevealViewController.m */; };
 		A4C122241D54653400A6966C /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4C122231D54653400A6966C /* Gotham-Light.otf */; };
+		A4C4B1731D5D6F0700127DC9 /* SeventhChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C4B1721D5D6F0700127DC9 /* SeventhChartTableViewCell.swift */; };
 		A4E9AE141D37390F0034BD7C /* SecondChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */; };
 		A4E9AE1E1D3777080034BD7C /* ThirdChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */; };
 		A4E9AE201D378EA60034BD7C /* FourthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */; };
@@ -91,6 +92,7 @@
 		A4A55FBE1D34F9FB002CE412 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		A4A55FBF1D34F9FB002CE412 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		A4C122231D54653400A6966C /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
+		A4C4B1721D5D6F0700127DC9 /* SeventhChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeventhChartTableViewCell.swift; sourceTree = "<group>"; };
 		A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondChartViewController.swift; sourceTree = "<group>"; };
 		A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdChartViewController.swift; sourceTree = "<group>"; };
 		A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthChartViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		A40732C41D5C8B9800630172 /* Eighth */ = {
 			isa = PBXGroup;
 			children = (
+				A4C4B1711D5D6EA200127DC9 /* CustomCell */,
 				A40732C61D5C8BAF00630172 /* ViewController */,
 			);
 			path = Eighth;
@@ -153,6 +156,7 @@
 		A40732C51D5C8B9800630172 /* Seventh */ = {
 			isa = PBXGroup;
 			children = (
+				A4C4B1701D5D6E9C00127DC9 /* CustomCell */,
 				A40732C71D5C8BB400630172 /* ViewController */,
 			);
 			path = Seventh;
@@ -430,6 +434,21 @@
 				A4597B541D35ED3500ABEFAA /* MenuCustomViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A4C4B1701D5D6E9C00127DC9 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4C4B1721D5D6F0700127DC9 /* SeventhChartTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		A4C4B1711D5D6EA200127DC9 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		A4E9AE0E1D3738500034BD7C /* ViewController */ = {
@@ -765,6 +784,7 @@
 				A4E9AE1E1D3777080034BD7C /* ThirdChartViewController.swift in Sources */,
 				A41008901D389BCD00B57D4E /* FifthChartViewController.swift in Sources */,
 				A4597B531D35ED2700ABEFAA /* MenuViewController.swift in Sources */,
+				A4C4B1731D5D6F0700127DC9 /* SeventhChartTableViewCell.swift in Sources */,
 				A4E9AE141D37390F0034BD7C /* SecondChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
