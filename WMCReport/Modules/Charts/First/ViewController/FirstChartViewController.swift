@@ -134,7 +134,6 @@ class FirstChartViewController: UIViewController, ChartViewDelegate {
             labelChange.text = String(format: "-%.0f", change)
         }
         previous = highlight.value
-        
     }
     
     func getMonth() -> Int {

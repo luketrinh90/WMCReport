@@ -38,7 +38,6 @@ class EighthChartViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("eighthChartCollectionViewCell", forIndexPath: indexPath) as! EighthChartCollectionViewCell
         
-        
         if indexPath.row == 0 {
             cell.labelDescription.text = "TODAY'S REVENUE"
             cell.labelNumber.text = "17,325,000"
@@ -72,8 +71,13 @@ class EighthChartViewController: UIViewController, UICollectionViewDataSource, U
             cell.labelNumber.text = "50,145"
             cell.backgroundColor = UIColor(red: 255/255, green: 91/255, blue: 87/255, alpha: 1.0).colorWithAlphaComponent(0.85)
         }
-        
-        
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.95,0.95,1)
+        UIView.animateWithDuration(0.5, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1,1,1)
+        })
     }
 }

@@ -74,4 +74,11 @@ class SeventhChartViewController: UIViewController, UITableViewDataSource, UITab
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.95,0.95,1)
+        UIView.animateWithDuration(0.5, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1,1,1)
+        })
+    }
 }
