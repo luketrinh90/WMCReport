@@ -13,14 +13,13 @@ import ActionSheetPicker_3_0
 class FifthChartViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var btnMenu: UIButton!
-    @IBOutlet weak var combinedChartView: CombinedChartView!
-    @IBOutlet weak var labelCurrent: UILabel!
-    @IBOutlet weak var labelMonth: UILabel!
-    @IBOutlet weak var labelHighest: UILabel!
+    @IBOutlet weak var lineChartView: LineChartView!
+    
+    var previous = 0.0
+    var change = 0.0
     
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    var set1 = [20.0, 4.0, 17.0, 3.0, 12.0, 32.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-    var set2 = [50.0, 30.0, 10.0, 15.0, 25.0, 20.0, 17.0, 39.0, 32.0, 46.0, 57.0, 24.0]
+    var set1 = [23.0, 25.0, 24.0, 22.0, 21.0, 19.0, 25.0, 24.0, 23.0, 30.0, 20.0, 22.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,52 +38,60 @@ class FifthChartViewController: UIViewController, ChartViewDelegate {
     }
     
     func initFirst() {
-        combinedChartView.delegate = self
-        setChart(months, yValuesLineChart: set1, yValuesBarChart: set2)
+        lineChartView.delegate = self
+        setChart(months, set1: set1)
     }
     
-    func setChart(xValues: [String], yValuesLineChart: [Double], yValuesBarChart: [Double]) {
-        combinedChartView.noDataText = "Please provide data for the chart."
-        
+    func setChart(months : [String], set1: [Double]) {
+        // 1 - creating an array of data entries
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
-        var yVals2 : [BarChartDataEntry] = [BarChartDataEntry]()
-        
-        for i in 0..<xValues.count {
-            yVals1.append(ChartDataEntry(value: yValuesLineChart[i], xIndex: i))
-            yVals2.append(BarChartDataEntry(value: yValuesBarChart[i] - 1, xIndex: i))
+        for i in 0 ..< months.count {
+            yVals1.append(ChartDataEntry(value: set1[i], xIndex: i))
         }
         
-        //
-        let lineChartSet = LineChartDataSet(yVals: yVals1, label: "Line Data")
-        lineChartSet.setColor(UIColor(red: 220/255, green: 202/255, blue: 44/255, alpha: 1.0).colorWithAlphaComponent(0.5)) // our line's opacity is 50%
-        lineChartSet.setCircleColor(UIColor(red: 220/255, green: 202/255, blue: 44/255, alpha: 1.0)) // our circle will be dark red
-        lineChartSet.lineWidth = 2.0
-        lineChartSet.circleRadius = 6.0 // the radius of the node circle
-        lineChartSet.fillAlpha = 65 / 255.0
-        lineChartSet.fillColor = UIColor(red: 220/255, green: 202/255, blue: 44/255, alpha: 1.0)
-        lineChartSet.highlightColor = UIColor.blueColor()
-        lineChartSet.drawCircleHoleEnabled = true
+        // 2 - create a data set with our array
+        let set1: LineChartDataSet = LineChartDataSet(yVals: yVals1, label: "First Set")
+        set1.axisDependency = .Left // Line will correlate with left axis values
+        set1.setColor(UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0).colorWithAlphaComponent(1.0)) // our line's opacity is 50%
+        set1.setCircleColor(UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)) // our circle will be dark red
+        set1.lineWidth = 2.0
+        set1.circleRadius = 0.0 // the radius of the node circle
+        set1.fillAlpha = 65 / 255.0
+        set1.fillColor = UIColor(red: 116/255, green: 230/255, blue: 252/255, alpha: 1.0)
+        set1.highlightColor = UIColor.whiteColor()
+        set1.drawCircleHoleEnabled = false
+        set1.mode = .CubicBezier
+        set1.drawFilledEnabled = true
         
-        //
-        let barChartSet: BarChartDataSet = BarChartDataSet(yVals: yVals2, label: "Bar Data")
-        barChartSet.colors = [UIColor(red: 99/255, green: 207/255, blue: 228/255, alpha: 1)]
+        //3 - create an array to store our LineChartDataSets
+        var dataSets : [LineChartDataSet] = [LineChartDataSet]()
+        dataSets.append(set1)
         
-        let data: CombinedChartData = CombinedChartData(xVals: xValues)
-        data.barData = BarChartData(xVals: xValues, dataSets: [barChartSet])
-        data.lineData = LineChartData(xVals: xValues, dataSets: [lineChartSet])
+        //4 - pass our months in for our x-axis label value along with our dataSets
+        let data: LineChartData = LineChartData(xVals: months, dataSets: dataSets)
+        data.setValueTextColor(UIColor(red: 138/255, green: 138/255, blue: 138/255, alpha: 1.0))
         data.setDrawValues(false)
         
-        combinedChartView.data = data
-        combinedChartView.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .Linear)
-        combinedChartView.descriptionText = ""
+        //5 - finally set our data
+        lineChartView.data = data
+        lineChartView.animate(xAxisDuration: 1, easingOption: .Linear)
+        lineChartView.descriptionText = ""
         
         //
-        combinedChartView.xAxis.enabled = false
-        combinedChartView.legend.enabled = false
-        combinedChartView.leftAxis.enabled = false
-        combinedChartView.rightAxis.enabled = false
+        lineChartView.xAxis.enabled = false
+        lineChartView.legend.enabled = false
+        lineChartView.leftAxis.enabled = false
+        lineChartView.rightAxis.enabled = false
         
-        combinedChartView.doubleTapToZoomEnabled = false
+        // grid lines
+        lineChartView.xAxis.drawAxisLineEnabled = false
+        lineChartView.xAxis.drawGridLinesEnabled = false
+        lineChartView.leftAxis.drawAxisLineEnabled = false
+        lineChartView.leftAxis.drawGridLinesEnabled = false
+        lineChartView.rightAxis.drawAxisLineEnabled = false
+        lineChartView.rightAxis.drawGridLinesEnabled = false
+        
+        lineChartView.doubleTapToZoomEnabled = false
     }
     
     @IBAction func onOptionPressed(sender: AnyObject) {
@@ -96,7 +103,7 @@ class FifthChartViewController: UIViewController, ChartViewDelegate {
             print("picker = \(picker)")
             
             self.random()
-            self.setChart(self.months, yValuesLineChart: self.set1, yValuesBarChart: self.set2)
+            self.setChart(self.months, set1: self.set1)
             
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
@@ -104,8 +111,7 @@ class FifthChartViewController: UIViewController, ChartViewDelegate {
     
     func random() {
         for i in 0...11 {
-            set1[i] = Double(randRange(30, upper: 70))
-            set2[i] = Double(randRange(10, upper: 90))
+            set1[i] = Double(randRange(0, upper: 99))
         }
     }
     
@@ -114,25 +120,8 @@ class FifthChartViewController: UIViewController, ChartViewDelegate {
     }
     
     func chartValueSelected(chartView: ChartViewBase, entry: ChartDataEntry, dataSetIndex: Int, highlight: ChartHighlight) {
-        labelCurrent.text = String(format: "%.0f", highlight.value)
-        labelMonth.text = String(format: "%.0f | %.0f", set1[getMonth() - 1], set2[getMonth() - 1])
-        labelHighest.text = String(format: "%.0f | %.0f", getHighest(set1), getHighest(set2))
-    }
-    
-    func getMonth() -> Int {
-        let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Day , .Month , .Year], fromDate: date)
-        
-        let year =  components.year
-        let month = components.month
-        let day = components.day
-        
-        print(year)
-        print(month)
-        print(day)
-        
-        return month
+//        labelCurrent.text = String(format: "%.0f", highlight.value)
+//        labelHighest.text = String(format: "%.0f", getHighest(set1))
     }
     
     func getHighest(set: [Double]) -> Double {

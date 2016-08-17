@@ -55,9 +55,9 @@ class FourthChartViewController: UIViewController, ChartViewDelegate {
         // 2 - create a data set with our array
         let set1: LineChartDataSet = LineChartDataSet(yVals: yVals1, label: "First Set")
         set1.axisDependency = .Left // Line will correlate with left axis values
-        set1.setColor(UIColor(red: 167/255, green: 255/255, blue: 71/255, alpha: 1.0).colorWithAlphaComponent(0.5)) // our line's opacity is 50%
+        set1.setColor(UIColor(red: 167/255, green: 255/255, blue: 71/255, alpha: 1.0).colorWithAlphaComponent(0.7)) // our line's opacity is 50%
         set1.setCircleColor(UIColor(red: 167/255, green: 255/255, blue: 71/255, alpha: 1.0)) // our circle will be dark red
-        set1.lineWidth = 5.0
+        set1.lineWidth = 4.0
         set1.circleRadius = 0.0 // the radius of the node circle
         set1.fillAlpha = 65 / 255.0
         set1.fillColor = UIColor(red: 65/255, green: 72/255, blue: 83/255, alpha: 1.0)
