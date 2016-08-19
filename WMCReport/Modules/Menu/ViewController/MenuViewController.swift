@@ -50,10 +50,6 @@ class MenuViewController: UIViewController {
         let notificationInfo:String = notification.object as! String
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         switch notificationInfo {
-        case NotificationConstants.ViewController.HomeViewController:
-            let vc = storyboard.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.HomeViewController)
-            activeViewController = vc
-            break
         case NotificationConstants.ViewController.FirstChartViewController:
             let vc = storyboard.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.FirstChartViewController)
             activeViewController = vc
@@ -86,6 +82,10 @@ class MenuViewController: UIViewController {
             let vc = storyboard.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.EighthChartViewController)
             activeViewController = vc
             break
+        case NotificationConstants.ViewController.NinthChartViewController:
+            let vc = storyboard.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.NinthChartViewController)
+            activeViewController = vc
+            break
         default:
             break
         }
@@ -110,13 +110,8 @@ class MenuViewController: UIViewController {
             object: nil)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.HomeViewController)
+        let vc = storyboard.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.FirstChartViewController)
         activeViewController = vc
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.hidden = true
     }
 }
 

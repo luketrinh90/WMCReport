@@ -12,11 +12,6 @@ class MenuCustomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    @IBAction func onHomePressed(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(NotificationConstants.Navigation.kNotificationRequestNavigation, object: NotificationConstants.ViewController.HomeViewController)
     }
     
     @IBAction func onFirstChartPressed(sender: AnyObject) {
@@ -49,5 +44,9 @@ class MenuCustomViewController: UIViewController {
     
     @IBAction func onEighthChartPressed(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName(NotificationConstants.Navigation.kNotificationRequestNavigation, object: NotificationConstants.ViewController.EighthChartViewController)
+    }
+    
+    @IBAction func onNinthChartPressed(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationConstants.Navigation.kNotificationRequestNavigation, object: NotificationConstants.ViewController.NinthChartViewController)
     }
 }

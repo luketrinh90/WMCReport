@@ -15,8 +15,6 @@
 		A41008901D389BCD00B57D4E /* FifthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410088F1D389BCD00B57D4E /* FifthChartViewController.swift */; };
 		A4169C061D3F21030066F8A9 /* SixthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4169C051D3F21030066F8A9 /* SixthChartViewController.swift */; };
 		A4597B4D1D35E32300ABEFAA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */; };
-		A4597B4F1D35EC5000ABEFAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B4E1D35EC5000ABEFAA /* HomeViewController.swift */; };
-		A4597B511D35EC5B00ABEFAA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B501D35EC5B00ABEFAA /* HomeViewModel.swift */; };
 		A4597B531D35ED2700ABEFAA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B521D35ED2700ABEFAA /* MenuViewController.swift */; };
 		A4597B551D35ED3500ABEFAA /* MenuCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B541D35ED3500ABEFAA /* MenuCustomViewController.swift */; };
 		A4597B571D35ED4D00ABEFAA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4597B561D35ED4D00ABEFAA /* LoginViewController.swift */; };
@@ -38,6 +36,7 @@
 		A4E9AE141D37390F0034BD7C /* SecondChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */; };
 		A4E9AE1E1D3777080034BD7C /* ThirdChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */; };
 		A4E9AE201D378EA60034BD7C /* FourthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */; };
+		A4F216D01D66B92D00212049 /* NinthChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F216CF1D66B92D00212049 /* NinthChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +66,6 @@
 		A410088F1D389BCD00B57D4E /* FifthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthChartViewController.swift; sourceTree = "<group>"; };
 		A4169C051D3F21030066F8A9 /* SixthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SixthChartViewController.swift; sourceTree = "<group>"; };
 		A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		A4597B4E1D35EC5000ABEFAA /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A4597B501D35EC5B00ABEFAA /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A4597B521D35ED2700ABEFAA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A4597B541D35ED3500ABEFAA /* MenuCustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomViewController.swift; sourceTree = "<group>"; };
 		A4597B561D35ED4D00ABEFAA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +95,7 @@
 		A4E9AE131D37390F0034BD7C /* SecondChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondChartViewController.swift; sourceTree = "<group>"; };
 		A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdChartViewController.swift; sourceTree = "<group>"; };
 		A4E9AE1F1D378EA60034BD7C /* FourthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthChartViewController.swift; sourceTree = "<group>"; };
+		A4F216CF1D66B92D00212049 /* NinthChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NinthChartViewController.swift; sourceTree = "<group>"; };
 		AC8A8D1A2D1F179437453846 /* Pods-WMCReportUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMCReportUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMCReportUITests/Pods-WMCReportUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF3BCF94AEE5D26B221284C5 /* Pods_WMCReportUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReportUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3382FB1B4B7C337168D49FB /* Pods_WMCReportTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMCReportTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +181,7 @@
 		A4597B5B1D3620AF00ABEFAA /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				A4F216CD1D66B8F000212049 /* Ninth */,
 				A40732C41D5C8B9800630172 /* Eighth */,
 				A40732C51D5C8B9800630172 /* Seventh */,
 				A4597B5C1D3620AF00ABEFAA /* Fifth */,
@@ -348,7 +347,6 @@
 			children = (
 				A4597B5B1D3620AF00ABEFAA /* Charts */,
 				A4A55FC11D34F9FB002CE412 /* Container */,
-				A4A55FC31D34F9FB002CE412 /* Home */,
 				A4A55FC61D34F9FB002CE412 /* Login */,
 				A4A55FC91D34F9FB002CE412 /* Menu */,
 			);
@@ -369,31 +367,6 @@
 				A4597B4C1D35E32300ABEFAA /* ContainerViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		A4A55FC31D34F9FB002CE412 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				A4A55FC41D34F9FB002CE412 /* ViewController */,
-				A4A55FC51D34F9FB002CE412 /* ViewModel */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		A4A55FC41D34F9FB002CE412 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				A4597B4E1D35EC5000ABEFAA /* HomeViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		A4A55FC51D34F9FB002CE412 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				A4597B501D35EC5B00ABEFAA /* HomeViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A4A55FC61D34F9FB002CE412 /* Login */ = {
@@ -490,6 +463,22 @@
 			isa = PBXGroup;
 			children = (
 				A4E9AE1D1D3777080034BD7C /* ThirdChartViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A4F216CD1D66B8F000212049 /* Ninth */ = {
+			isa = PBXGroup;
+			children = (
+				A4F216CE1D66B8F000212049 /* ViewController */,
+			);
+			path = Ninth;
+			sourceTree = "<group>";
+		};
+		A4F216CE1D66B8F000212049 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4F216CF1D66B92D00212049 /* NinthChartViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -776,12 +765,11 @@
 				A40732CB1D5C8BE500630172 /* SeventhChartViewController.swift in Sources */,
 				A4C4B1751D5DC61300127DC9 /* EighthChartCollectionViewCell.swift in Sources */,
 				A4A55F641D34ED4F002CE412 /* AppDelegate.swift in Sources */,
-				A4597B511D35EC5B00ABEFAA /* HomeViewModel.swift in Sources */,
+				A4F216D01D66B92D00212049 /* NinthChartViewController.swift in Sources */,
 				A4597B641D3620D500ABEFAA /* FirstChartViewController.swift in Sources */,
 				A4597B4D1D35E32300ABEFAA /* ContainerViewController.swift in Sources */,
 				A4A55FCB1D34F9FB002CE412 /* NotificationConstant.swift in Sources */,
 				A4A55FF41D34F9FB002CE412 /* SWRevealViewController.m in Sources */,
-				A4597B4F1D35EC5000ABEFAA /* HomeViewController.swift in Sources */,
 				A4E9AE201D378EA60034BD7C /* FourthChartViewController.swift in Sources */,
 				A4169C061D3F21030066F8A9 /* SixthChartViewController.swift in Sources */,
 				A4597B571D35ED4D00ABEFAA /* LoginViewController.swift in Sources */,
