@@ -84,6 +84,13 @@
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
             <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
+            <string>MyriadPro-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -999,6 +1006,154 @@
             </objects>
             <point key="canvasLocation" x="3473" y="1688"/>
         </scene>
+        <!--Tenth Chart View Controller-->
+        <scene sceneID="bN0-3t-laC">
+            <objects>
+                <viewController storyboardIdentifier="TenthChartViewController" id="Bpm-kf-FIZ" customClass="TenthChartViewController" customModule="WMCReport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GPd-CG-9ug"/>
+                        <viewControllerLayoutGuide type="bottom" id="LNo-Ek-Y2S"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="mxY-eL-lXR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0v-VG-kWw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50M-0s-oxe">
+                                        <rect key="frame" x="550" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="hqW-6o-Tuv"/>
+                                        </constraints>
+                                        <state key="normal" image="option"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiK-Zu-4MF">
+                                        <rect key="frame" x="0.0" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Aai-hX-eMT"/>
+                                        </constraints>
+                                        <state key="normal" image="menu"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="50M-0s-oxe" secondAttribute="bottom" id="UOO-pC-RNj"/>
+                                    <constraint firstItem="PiK-Zu-4MF" firstAttribute="top" secondItem="H0v-VG-kWw" secondAttribute="top" constant="15" id="YN4-9O-McE"/>
+                                    <constraint firstAttribute="height" constant="65" id="amX-yb-7vk"/>
+                                    <constraint firstAttribute="bottom" secondItem="PiK-Zu-4MF" secondAttribute="bottom" id="bus-Tk-Mb0"/>
+                                    <constraint firstItem="50M-0s-oxe" firstAttribute="top" secondItem="H0v-VG-kWw" secondAttribute="top" constant="15" id="daE-q4-h3l"/>
+                                    <constraint firstAttribute="trailing" secondItem="50M-0s-oxe" secondAttribute="trailing" id="lRV-Q6-96M"/>
+                                    <constraint firstItem="PiK-Zu-4MF" firstAttribute="leading" secondItem="H0v-VG-kWw" secondAttribute="leading" id="wdW-f6-MVh"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGT-oc-lTq" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="65" width="600" height="260"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.27450980392156865" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="Kzf-mY-ztA"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tts-19-2eq">
+                                <rect key="frame" x="5" y="360" width="590" height="170"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DeR-oy-ptM" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="170"/>
+                                        <color key="backgroundColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bv-Uo-Cp2" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="298" y="0.0" width="292" height="170"/>
+                                        <color key="backgroundColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="fmX-oW-sRu"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9Uu-am-w80">
+                                <rect key="frame" x="0.0" y="325" width="600" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFi-RP-BTF">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="35"/>
+                                        <color key="backgroundColor" red="0.84705882352941175" green="0.81176470588235294" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="16"/>
+                                        <state key="normal" title="Food">
+                                            <color key="titleColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cad-8d-mh8">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="35"/>
+                                        <color key="backgroundColor" red="0.84705882352941175" green="0.81176470588235294" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="16"/>
+                                        <state key="normal" title="Drink">
+                                            <color key="titleColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEb-FZ-lVr">
+                                        <rect key="frame" x="300" y="0.0" width="150" height="35"/>
+                                        <color key="backgroundColor" red="0.84705882352941175" green="0.81176470588235294" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="16"/>
+                                        <state key="normal" title="Clothes">
+                                            <color key="titleColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MY-lY-mHS">
+                                        <rect key="frame" x="450" y="0.0" width="150" height="35"/>
+                                        <color key="backgroundColor" red="0.84705882352941175" green="0.81176470588235294" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="16"/>
+                                        <state key="normal" title="Cosmetic">
+                                            <color key="titleColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="XGz-fp-D3t"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqw-m0-6iI">
+                                <rect key="frame" x="131" y="557" width="41" height="18"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkM-yL-m8Q">
+                                <rect key="frame" x="428" y="557" width="41" height="18"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="H0v-VG-kWw" firstAttribute="leading" secondItem="mxY-eL-lXR" secondAttribute="leading" id="0oM-bn-DAw"/>
+                            <constraint firstItem="WGT-oc-lTq" firstAttribute="top" secondItem="H0v-VG-kWw" secondAttribute="bottom" id="6TA-cf-CdT"/>
+                            <constraint firstAttribute="trailing" secondItem="9Uu-am-w80" secondAttribute="trailing" id="Egq-ld-1Ue"/>
+                            <constraint firstItem="LNo-Ek-Y2S" firstAttribute="top" secondItem="IkM-yL-m8Q" secondAttribute="bottom" constant="25" id="LAw-BU-P3x"/>
+                            <constraint firstItem="H0v-VG-kWw" firstAttribute="top" secondItem="mxY-eL-lXR" secondAttribute="top" id="UfV-Fg-ytI"/>
+                            <constraint firstItem="9Uu-am-w80" firstAttribute="leading" secondItem="mxY-eL-lXR" secondAttribute="leading" id="brY-Nn-Qh7"/>
+                            <constraint firstItem="WGT-oc-lTq" firstAttribute="leading" secondItem="mxY-eL-lXR" secondAttribute="leading" id="elb-Pr-ayp"/>
+                            <constraint firstAttribute="trailing" secondItem="H0v-VG-kWw" secondAttribute="trailing" id="h5G-Qm-I9A"/>
+                            <constraint firstAttribute="trailing" secondItem="tts-19-2eq" secondAttribute="trailing" constant="5" id="hpK-mB-nBO"/>
+                            <constraint firstAttribute="trailing" secondItem="WGT-oc-lTq" secondAttribute="trailing" id="iek-gW-I7M"/>
+                            <constraint firstItem="LNo-Ek-Y2S" firstAttribute="top" secondItem="Qqw-m0-6iI" secondAttribute="bottom" constant="25" id="lJI-5E-be7"/>
+                            <constraint firstItem="tts-19-2eq" firstAttribute="leading" secondItem="mxY-eL-lXR" secondAttribute="leading" constant="5" id="nm6-gn-Xu2"/>
+                            <constraint firstItem="tts-19-2eq" firstAttribute="top" secondItem="9Uu-am-w80" secondAttribute="bottom" id="ojk-DN-8x9"/>
+                            <constraint firstItem="IkM-yL-m8Q" firstAttribute="centerX" secondItem="7Bv-Uo-Cp2" secondAttribute="centerX" id="pb5-Mb-Nlo"/>
+                            <constraint firstItem="Qqw-m0-6iI" firstAttribute="centerX" secondItem="DeR-oy-ptM" secondAttribute="centerX" id="rRo-yd-7CG"/>
+                            <constraint firstItem="9Uu-am-w80" firstAttribute="top" secondItem="WGT-oc-lTq" secondAttribute="bottom" id="y1S-8h-wg7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="WGT-oc-lTq" id="nY1-ef-NRI"/>
+                        <outlet property="btnMenu" destination="PiK-Zu-4MF" id="JKO-Gx-6xK"/>
+                        <outlet property="pieChartView1" destination="DeR-oy-ptM" id="0qz-pQ-6ER"/>
+                        <outlet property="pieChartView2" destination="7Bv-Uo-Cp2" id="pNY-8E-rnH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uji-TL-pIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4125" y="1688"/>
+        </scene>
         <!--Second Chart View Controller-->
         <scene sceneID="GNN-66-nIG">
             <objects>
@@ -1622,9 +1777,9 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKA-xN-47W">
-                                <rect key="frame" x="30" y="95" width="77" height="30"/>
+                                <rect key="frame" x="35" y="80" width="32" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
-                                <state key="normal" title="First Chart">
+                                <state key="normal" title="First">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1632,9 +1787,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1D-Xb-H0R">
-                                <rect key="frame" x="30" y="145" width="102" height="30"/>
+                                <rect key="frame" x="35" y="125" width="56" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
-                                <state key="normal" title="Second Chart">
+                                <state key="normal" title="Second">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1642,9 +1797,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JR6-6L-7TC">
-                                <rect key="frame" x="30" y="195" width="85" height="30"/>
+                                <rect key="frame" x="35" y="170" width="39" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
-                                <state key="normal" title="Third Chart">
+                                <state key="normal" title="Third">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1652,9 +1807,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzW-wc-xb2">
-                                <rect key="frame" x="30" y="245" width="96" height="30"/>
+                                <rect key="frame" x="35" y="215" width="51" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
-                                <state key="normal" title="Fourth Chart">
+                                <state key="normal" title="Fourth">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1662,9 +1817,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzy-DO-jbp">
-                                <rect key="frame" x="30" y="295" width="80" height="30"/>
+                                <rect key="frame" x="35" y="260" width="34" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
-                                <state key="normal" title="Fifth Chart">
+                                <state key="normal" title="Fifth">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1672,9 +1827,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ft-uj-cIS">
-                                <rect key="frame" x="30" y="345" width="83" height="30"/>
+                                <rect key="frame" x="35" y="305" width="38" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
-                                <state key="normal" title="Sixth Chart">
+                                <state key="normal" title="Sixth">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1682,9 +1837,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yx-rx-wcF">
-                                <rect key="frame" x="30" y="395" width="107" height="30"/>
+                                <rect key="frame" x="35" y="350" width="62" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
-                                <state key="normal" title="Seventh Chart">
+                                <state key="normal" title="Seventh">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1692,9 +1847,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbd-br-tUq">
-                                <rect key="frame" x="30" y="445" width="95" height="30"/>
+                                <rect key="frame" x="35" y="395" width="49" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
-                                <state key="normal" title="Eighth Chart">
+                                <state key="normal" title="Eighth">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1702,38 +1857,50 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="am8-Hm-CFn">
-                                <rect key="frame" x="30" y="495" width="88" height="30"/>
+                                <rect key="frame" x="35" y="440" width="43" height="30"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
-                                <state key="normal" title="Ninth Chart">
+                                <state key="normal" title="Ninth">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="onNinthChartPressed:" destination="qt9-kp-4L3" eventType="touchUpInside" id="yOf-7s-ghb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ish-N3-lQa">
+                                <rect key="frame" x="35" y="485" width="43" height="30"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="18"/>
+                                <state key="normal" title="Tenth">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTenthChartPressed:" destination="qt9-kp-4L3" eventType="touchUpInside" id="C8K-hV-D6w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.094117647058823528" green="0.10196078431372549" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="9Yx-rx-wcF" firstAttribute="leading" secondItem="GKA-xN-47W" secondAttribute="leading" id="0qF-SW-fDg"/>
-                            <constraint firstItem="9Yx-rx-wcF" firstAttribute="top" secondItem="9Ft-uj-cIS" secondAttribute="bottom" constant="20" id="Bom-EX-nT9"/>
+                            <constraint firstItem="9Yx-rx-wcF" firstAttribute="top" secondItem="9Ft-uj-cIS" secondAttribute="bottom" constant="15" id="Bom-EX-nT9"/>
                             <constraint firstItem="BzW-wc-xb2" firstAttribute="leading" secondItem="GKA-xN-47W" secondAttribute="leading" id="DNJ-qW-4SW"/>
-                            <constraint firstItem="JR6-6L-7TC" firstAttribute="top" secondItem="l1D-Xb-H0R" secondAttribute="bottom" constant="20" id="EZt-iH-9JK"/>
+                            <constraint firstItem="JR6-6L-7TC" firstAttribute="top" secondItem="l1D-Xb-H0R" secondAttribute="bottom" constant="15" id="EZt-iH-9JK"/>
                             <constraint firstItem="gzy-DO-jbp" firstAttribute="leading" secondItem="GKA-xN-47W" secondAttribute="leading" id="GqZ-HL-zKb"/>
                             <constraint firstItem="l1D-Xb-H0R" firstAttribute="leading" secondItem="GKA-xN-47W" secondAttribute="leading" id="MTo-le-unE"/>
                             <constraint firstAttribute="trailing" secondItem="OoP-qU-8sT" secondAttribute="trailing" id="Mjd-ni-es1"/>
-                            <constraint firstItem="9Ft-uj-cIS" firstAttribute="top" secondItem="gzy-DO-jbp" secondAttribute="bottom" constant="20" id="Moo-Ko-jul"/>
-                            <constraint firstItem="gbd-br-tUq" firstAttribute="top" secondItem="9Yx-rx-wcF" secondAttribute="bottom" constant="20" id="TXS-QB-a0D"/>
+                            <constraint firstItem="9Ft-uj-cIS" firstAttribute="top" secondItem="gzy-DO-jbp" secondAttribute="bottom" constant="15" id="Moo-Ko-jul"/>
+                            <constraint firstItem="gbd-br-tUq" firstAttribute="top" secondItem="9Yx-rx-wcF" secondAttribute="bottom" constant="15" id="TXS-QB-a0D"/>
                             <constraint firstItem="9Ft-uj-cIS" firstAttribute="leading" secondItem="GKA-xN-47W" secondAttribute="leading" id="Vx8-Mk-HL3"/>
-                            <constraint firstItem="BzW-wc-xb2" firstAttribute="top" secondItem="JR6-6L-7TC" secondAttribute="bottom" constant="20" id="ZyO-4b-WVE"/>
+                            <constraint firstItem="BzW-wc-xb2" firstAttribute="top" secondItem="JR6-6L-7TC" secondAttribute="bottom" constant="15" id="ZyO-4b-WVE"/>
                             <constraint firstItem="gbd-br-tUq" firstAttribute="leading" secondItem="GKA-xN-47W" secondAttribute="leading" id="gIx-JX-wiO"/>
-                            <constraint firstItem="gzy-DO-jbp" firstAttribute="top" secondItem="BzW-wc-xb2" secondAttribute="bottom" constant="20" id="ifX-XF-7Bk"/>
+                            <constraint firstItem="ish-N3-lQa" firstAttribute="top" secondItem="am8-Hm-CFn" secondAttribute="bottom" constant="15" id="iaq-2B-tue"/>
+                            <constraint firstItem="gzy-DO-jbp" firstAttribute="top" secondItem="BzW-wc-xb2" secondAttribute="bottom" constant="15" id="ifX-XF-7Bk"/>
                             <constraint firstItem="OoP-qU-8sT" firstAttribute="top" secondItem="SFq-MW-RoO" secondAttribute="top" id="nId-Ps-cjp"/>
                             <constraint firstItem="JR6-6L-7TC" firstAttribute="leading" secondItem="GKA-xN-47W" secondAttribute="leading" id="oLS-8U-7Rg"/>
-                            <constraint firstItem="l1D-Xb-H0R" firstAttribute="top" secondItem="GKA-xN-47W" secondAttribute="bottom" constant="20" id="oux-Vk-YM4"/>
-                            <constraint firstItem="GKA-xN-47W" firstAttribute="top" secondItem="OoP-qU-8sT" secondAttribute="bottom" constant="30" id="pAY-o8-nc8"/>
-                            <constraint firstItem="GKA-xN-47W" firstAttribute="leading" secondItem="SFq-MW-RoO" secondAttribute="leading" constant="30" id="rRN-AH-wR5"/>
+                            <constraint firstItem="l1D-Xb-H0R" firstAttribute="top" secondItem="GKA-xN-47W" secondAttribute="bottom" constant="15" id="oux-Vk-YM4"/>
+                            <constraint firstItem="GKA-xN-47W" firstAttribute="top" secondItem="OoP-qU-8sT" secondAttribute="bottom" constant="15" id="pAY-o8-nc8"/>
+                            <constraint firstItem="GKA-xN-47W" firstAttribute="leading" secondItem="SFq-MW-RoO" secondAttribute="leading" constant="35" id="rRN-AH-wR5"/>
                             <constraint firstItem="OoP-qU-8sT" firstAttribute="leading" secondItem="SFq-MW-RoO" secondAttribute="leading" id="tJf-JE-8pE"/>
-                            <constraint firstItem="am8-Hm-CFn" firstAttribute="top" secondItem="gbd-br-tUq" secondAttribute="bottom" constant="20" id="ur9-ti-Tn8"/>
+                            <constraint firstItem="ish-N3-lQa" firstAttribute="leading" secondItem="GKA-xN-47W" secondAttribute="leading" id="uMA-dY-wxO"/>
+                            <constraint firstItem="am8-Hm-CFn" firstAttribute="top" secondItem="gbd-br-tUq" secondAttribute="bottom" constant="15" id="ur9-ti-Tn8"/>
                             <constraint firstItem="am8-Hm-CFn" firstAttribute="leading" secondItem="GKA-xN-47W" secondAttribute="leading" id="x4D-hp-4Dw"/>
                         </constraints>
                     </view>

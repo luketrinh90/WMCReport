@@ -49,4 +49,8 @@ class MenuCustomViewController: UIViewController {
     @IBAction func onNinthChartPressed(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName(NotificationConstants.Navigation.kNotificationRequestNavigation, object: NotificationConstants.ViewController.NinthChartViewController)
     }
+    
+    @IBAction func onTenthChartPressed(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationConstants.Navigation.kNotificationRequestNavigation, object: NotificationConstants.ViewController.TenthChartViewController)
+    }
 }

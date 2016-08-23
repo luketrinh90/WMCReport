@@ -32,5 +32,6 @@ struct NotificationConstants {
         static let SeventhChartViewController = "SeventhChartViewController"
         static let EighthChartViewController = "EighthChartViewController"
         static let NinthChartViewController = "NinthChartViewController"
+        static let TenthChartViewController = "TenthChartViewController"
     }
 }
