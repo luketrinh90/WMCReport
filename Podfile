@@ -3,7 +3,7 @@ use_frameworks!
 
 def shared_pods
     pod 'PKHUD', '~> 3.1.0'
-    pod 'Charts'
+    pod 'Charts', '~> 2.2.5'
     pod 'ActionSheetPicker-3.0'
 end
 

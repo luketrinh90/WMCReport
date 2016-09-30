@@ -35,6 +35,10 @@ class EighthChartViewController: UIViewController, UICollectionViewDataSource, U
         return 8
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(self.view.frame.width/2, self.view.frame.width/2)
+    }
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("eighthChartCollectionViewCell", forIndexPath: indexPath) as! EighthChartCollectionViewCell
         
